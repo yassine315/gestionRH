@@ -15,7 +15,7 @@
 				<div class="card card-signin my-5">
 					<div class="card-body">
 						<h5 class="card-title text-center">Sign In</h5>
-						<form class="form-signin">
+						<form class="form-signin" method="post" action="/gestionRH/Login">
 							<div class="form-label-group">
 							<label
 									for="inputEmail">Email address</label>
@@ -34,7 +34,7 @@
 								<p><a href="">mot de passe oublie</a></p>
 							</div>
 							<button class="btn btn-lg btn-primary btn-block text-uppercase"
-								type="submit">Sign in</button>
+								type="submit" >Sign in</button>
 							<hr class="my-4">
 						</form>
 					</div>
