@@ -5,22 +5,31 @@
             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3><a href="http://localhost:8080/gestionrh1/tamplate_principale.jsp">ENSAM admin</a></h3>
+                    <h3><a href=""/gestionRH/Prof">ENSAM admin</a></h3>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>Adminestrer Professeurs</p>
+                    <p>Administrer les professeurs</p>
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Professeurs</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="#">Ajouter</a></li>
-                            <li><a href="#">Consulter</a></li>
+                            <li><a href="/gestionRH/AjouterProf">Ajouter</a></li>
+                            <li><a href="/gestionRH/Prof">Consulter</a></li>
                             <li><a href="#">Archiver</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Attestation</a>
+                    
+                    <li class="active">
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Documents</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="/gestionRH/Attestation">Attestations</a></li>
+                            <li><a href="/gestionRH/Demmande">Demandes</a></li>
+                            <li><a href="/gestionRH/Recu">Reçus</a></li>
+                            <li><a href="#">Reprises de travail</a></li>
+                            <li><a href="#">Justificatifs</a></li>
+                        </ul>
                     </li>
+                    
                     <!-- 
                     <li class="active">
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Utilisateurs</a>
@@ -58,13 +67,15 @@
                         </div>
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <!--
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#">Page</a></li>
                                 <li><a href="#">Page</a></li>
                                 <li><a href="#">Page</a></li>
                                 <li><a href="#">Page</a></li>
                             </ul>
+                            -->
                         </div>
                     </div>
                 </nav>
-             </div>
+             

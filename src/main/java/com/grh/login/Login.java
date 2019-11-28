@@ -24,8 +24,9 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		// TODO Auto-generated method stub
-		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboard/dashbord.jsp").forward(request, response);
+		request.getServletContext().getRequestDispatcher("/WEB-INF/accueil.html").forward(request, response);
 		
 	}
 

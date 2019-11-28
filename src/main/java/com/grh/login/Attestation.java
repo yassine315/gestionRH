@@ -7,15 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Prof
+ * Servlet implementation class Attestation
  */
-public class Prof extends HttpServlet {
+public class Attestation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Prof() {
+    public Attestation() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -25,7 +25,7 @@ public class Prof extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboardProf/dashbord_Prof.jsp").forward(request, response);
+		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboardProf/dashboard_Attestation.jsp").forward(request, response);
 
 	}
 

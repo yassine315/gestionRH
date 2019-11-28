@@ -11,10 +11,62 @@
   	<description></description>
   	<servlet-class>com.grh.login.Login</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Prof</servlet-name>
+  	<display-name>Prof</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.Prof</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AjouterProf</servlet-name>
+  	<display-name>AjouterProf</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.AjouterProf</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Attestation</servlet-name>
+  	<display-name>Attestation</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.Attestation</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Demmande</servlet-name>
+  	<display-name>Demmande</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.Demmande</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Recu</servlet-name>
+  	<display-name>Recu</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.Recu</servlet-class>
+  </servlet>
+ 
   
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Prof</servlet-name>
+  	<url-pattern>/Prof</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AjouterProf</servlet-name>
+  	<url-pattern>/AjouterProf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Attestation</servlet-name>
+  	<url-pattern>/Attestation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Demmande</servlet-name>
+  	<url-pattern>/Demmande</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Recu</servlet-name>
+  	<url-pattern>/Recu</url-pattern>
+  </servlet-mapping>
+
   
 </web-app>
