@@ -34,7 +34,7 @@
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
            <h6 class="card-price text-center">Attestation de travail</h6>
-            <form class="form" action="./grh_attestation/attestation_travail.html" method="post">
+            <form class="form" action="./grh_attestation/attestation_travail.jsp" method="get">
             	<label for="som">SOM :</label><br/>
             	<input type="number" id="som" name="som" />
             	<button  type="submit" class="btn btn-block btn-primary text-uppercase">Generer</button>

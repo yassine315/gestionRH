@@ -1,4 +1,4 @@
-package com.grh.login;
+package com.grh.filiere;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,15 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AjouterProf
+ * Servlet implementation class AjouterFiliere
  */
-public class AjouterProf extends HttpServlet {
+public class AjouterFiliere extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AjouterProf() {
+    public AjouterFiliere() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -25,7 +25,7 @@ public class AjouterProf extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboard/dashboardAjouterProf.jsp").forward(request, response);
+		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboardFiliere/dashboard_AjouterFiliere.jsp").forward(request, response);
 	}
 
 	/**

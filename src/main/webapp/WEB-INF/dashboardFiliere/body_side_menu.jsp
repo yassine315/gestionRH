@@ -11,14 +11,14 @@
                 <ul class="list-unstyled components">
                     <p>Administrer les professeurs</p>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Professeurs</a>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Filieres</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="/gestionRH/AjouterProf">Ajouter</a></li>
+                            <li><a href="/gestionRH/AjouterFiliere">Ajouter</a></li>
                             <li><a href="/gestionRH/Prof">Consulter</a></li>
-                            <li><a href="#">Archiver</a></li>
+                
                         </ul>
                     </li>
-                    
+                    <!-- 
                     <li class="active">
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Documents</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
@@ -48,7 +48,7 @@
                 </ul>
 
                 <ul class="list-unstyled CTAs">
-                    <!-- <li><a href="#" class="download">button</a></li> -->
+                    <!-- <li><a href="#" class="download">button</a></li>-->
                     <li><a href="#" class="article">Deconnecter</a></li>
                 </ul>
             </nav>
