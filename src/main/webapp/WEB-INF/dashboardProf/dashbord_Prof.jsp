@@ -130,7 +130,7 @@
         <h4 class="modal-title custom_align" id="Heading">Modifier ce prof</h4>
       </div>
       <div class="modal-body">
-      
+      <!-- formulaire de moification -->
       	<form class="form-horizontal" role="form">
                 <h2>Registration Form</h2>
                 <div class="form-group">

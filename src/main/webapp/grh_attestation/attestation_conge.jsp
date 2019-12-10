@@ -8,16 +8,6 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<%
-
- String SOM = (String) request.getAttribute("SOM");
-
-
-
-
-
-%>
-
 <TITLE>attestation de congé</TITLE>
 <META name="ensam admin" content="attestation de congé">
 <STYLE type="text/css">
