@@ -1,0 +1,78 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.MySQLDialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         com.mysql.cj.jdbc.Driver
+      </property>
+      
+      <!-- Assume test is the database name -->
+      
+      <property name = "hibernate.connection.url">
+      jdbc:mysql://localhost/gestionrh?serverTimezone=UTC
+      </property>
+      
+      <property name = "hibernate.connection.username">
+         root
+      </property>
+      
+      <property name = "hibernate.connection.password">
+         sahrawia
+      </property>
+      
+      <property name = "useUnicode">
+         true
+      </property>
+      
+       <property name = "useJDBCCompliantTimezoneShift">
+         true
+      </property>
+      
+      <property name = "useLegacyDatetimeCode">
+         false
+      </property>
+      
+      <property name = "serverTimezone">
+         UTC
+      </property>
+      
+      <property name = "useSSL">
+         false
+      </property>
+      
+      <property name="hibernate.show_sql">
+      true
+      </property>
+      
+      <!-- 
+      <mapping class="com.beans.Action" />
+      <mapping class="com.beans.Actions" />
+      <mapping class="com.beans.Attestation" />
+      <mapping class="com.beans.Conge" />
+      <mapping class="com.beans.Departement" />
+      <mapping class="com.beans.Diplome" />
+      <mapping class="com.beans.DroitUt" />
+      <mapping class="com.beans.ElementModule" />
+      <mapping class="com.beans.Enseigner" />
+      <mapping class="com.beans.Filiere" />
+      <mapping class="com.beans.Grade" />
+      <mapping class="com.beans.Mission" />
+      <mapping class="com.beans.Module" />
+      -->
+      <mapping class="com.grh.beans.Prof" />
+      <!-- 
+      <mapping class="com.beans.QuitterTerrit" />
+      <mapping class="com.beans.Section" />
+      <mapping class="com.beans.Segrader" />
+      <mapping class="com.beans.Utilisateur" />
+      -->
+      
+      
+   </session-factory>
+</hibernate-configuration>

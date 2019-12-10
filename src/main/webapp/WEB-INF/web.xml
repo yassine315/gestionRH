@@ -47,6 +47,19 @@
   	<description></description>
   	<servlet-class>com.grh.filiere.AjouterFiliere</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Utilisateur</servlet-name>
+  	<display-name>Utilisateur</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.Utilisateur</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Generer</servlet-name>
+  	<display-name>Generer</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.Generer</servlet-class>
+  </servlet>
+  
  
   
   <servlet-mapping>
@@ -77,6 +90,13 @@
   	<servlet-name>AjouterFiliere</servlet-name>
   	<url-pattern>/AjouterFiliere</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+  	<servlet-name>Utilisateur</servlet-name>
+  	<url-pattern>/Utilisateur</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Generer</servlet-name>
+  	<url-pattern>/Generer</url-pattern>
+  </servlet-mapping>
   
 </web-app>

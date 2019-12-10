@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@page import="com.grh.beans.Prof" %>
+    
+    <% Prof prof = (Prof)request.getAttribute("prof"); %>
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
@@ -111,10 +114,10 @@ function lI1IllI111IlI1I1llll1lIIl()
 <DIV class="dclr"></DIV>
 <P class="p0 ft0">ATTESTATION DE TRAVAIL</P>
 <P class="p1 ft1">Le directeur de l’Ecole Nationale Supérieure d’Arts et Métiers de Casablanca, soussigné, atteste que :</P>
-<P class="p2 ft1">Mr (Mme) :</P>
-<P class="p2 ft1">Né (e) le :</P>
-<P class="p3 ft1">Fonction :</P>
-<P class="p3 ft1">S. O. M. :</P>
+<P class="p2 ft1">Mr (Mme) :<%= prof.getNomProf()+" "+prof.getPrenomProf()   %></P>
+<P class="p2 ft1">Né (e) le :<%= prof.getDateNaiss() %></P>
+<P class="p3 ft1">Fonction :<%= prof.getFonction() %></P>
+<P class="p3 ft1">S. O. M. : <%= prof.getSom() %></P>
 <P class="p4 ft1">est en fonction à l’ENSAM Casablanca depuis le</P>
 <P class="p5 ft1">La présente attestation est délivrée à la demande de l’intéressé(e) pour servir et valoir ce que de droit.</P>
 <P class="p6 ft1">Fait à Casablanca le</P>

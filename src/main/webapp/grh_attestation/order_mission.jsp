@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="com.grh.beans.Prof"%>
+    <% Prof prof = (Prof)request.getAttribute("prof"); %>
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
@@ -115,17 +119,17 @@ function lI1IllI111IlI1I1llll1lIIl()
 	var lIlI1l1lIlIl111Il1l1lI1I1 = llI1llllIII1IIIllI11l111l(1, 1, "tr1 td2", -1);
 	var ll1IlIlIl1l11lI1ll1IllI11 = Il11I1Il1Il1I1lIllIlI11ll(-1);
 	lIlI1l1lIlIl111Il1l1lI1I1.innerHTML = "<P class=\"p1 ft3\">Nom</P>";
-	Ill111I1IIlIIIII1I1l1IlIl.innerHTML = "<P class=\"p1 ft5\">Tél. : 00 212 522 564 222</P>";
+	Ill111I1IIlIIIII1I1l1IlIl.innerHTML = "<P class=\"p1 ft5\">TÃ©l. : 00 212 522 564 222</P>";
 	l11lIllllI1llII1111l11Il1.innerHTML = "<P class=\"p1 ft3\">Grade</P>";
-	IIlIIl11l1lIlIIl1IIll11II.innerHTML = "<P class=\"p3 ft3\">:</P>";
+	IIlIIl11l1lIlIIl1IIll11II.innerHTML = "<P class=\"p3 ft3\">: %></P>";
 	l1IlI1111lI1IllIIlllIl111.innerHTML = "<P class=\"p3 ft3\">:</P>";
-	ll1IllI1II1ll1llIlIIlIIll.innerHTML = "<P class=\"p1 ft3\">Se rend à</P>";
-	I11l1I11llII1IllIlIll1lll.innerHTML = "<P class=\"p1 ft5\">Av. Nile, 150, Grand Casablanca – Maroc</P>";
+	ll1IllI1II1ll1llIlIIlIIll.innerHTML = "<P class=\"p1 ft3\">Se rend Ã </P>";
+	I11l1I11llII1IllIlIll1lll.innerHTML = "<P class=\"p1 ft5\">Av. Nile, 150, Grand Casablanca â Maroc</P>";
 	llI1llI11lIl1IIII1lI111l1.innerHTML = "<P class=\"p3 ft3\">:</P>";
 	Il1IIlI1IlII1l1I1l11I1lll.innerHTML = "<P class=\"p1 ft5\">Fax : 00 212 522 562 093</P>";
 	lIlIIlIIIl1lllIllIl11I1ll.innerHTML = "<P class=\"p1 ft1\">Casablanca, Le</P>";
-	I1llI1IIl11l1IlII111l11I1.innerHTML = "<P class=\"p1 ft2\">الدار البيضاء في</P>";
-	lllIllIIIIllI1ll11Il1IIll.innerHTML = "<P class=\"p1 ft3\">Prénom</P>";
+	I1llI1IIl11l1IlII111l11I1.innerHTML = "<P class=\"p1 ft2\">Ø§ÙØ¯Ø§Ø± Ø§ÙØ¨ÙØ¶Ø§Ø¡ ÙÙ</P>";
+	lllIllIIIIllI1ll11Il1IIll.innerHTML = "<P class=\"p1 ft3\">PrÃ©nom</P>";
 	ll1lI1lIl1IllI1llII111111.innerHTML = "<P class=\"p3 ft3\">:</P>";
 	lIIII11llI1II1l11II1llllI.appendChild(lIlIIlIIIl1lllIllIl11I1ll);
 	lIIII11llI1II1l11II1llllI.appendChild(I1llI1IIl11l1IlII111l11I1);
@@ -158,17 +162,17 @@ function lI1IllI111IlI1I1llll1lIIl()
 
 
 <DIV class="dclr"></DIV>
-<P class="p0 ft0">المدرسة الوطنية العليا للفنون و المهن</P>
+<P class="p0 ft0">Ø§ÙÙØ¯Ø±Ø³Ø© Ø§ÙÙØ·ÙÙØ© Ø§ÙØ¹ÙÙØ§ ÙÙÙÙÙÙ Ù Ø§ÙÙÙÙ</P>
     
 <TABLE id="l111l1llI1IIl1l1ll1lI1I11" cellpadding=0 cellspacing=0 class="t0"></TABLE>
 <P class="p2 ft1">Ordre de mission</P>
     
 <TABLE id="lllI1lIII11llII1II1l1lI1l" cellpadding=0 cellspacing=0 class="t1"></TABLE>
-<P class="p4 ft3">Date du départ :</P>
+<P class="p4 ft3">Date du dÃ©part :</P>
 <P class="p4 ft3">Date du retour :</P>
 <P class="p5 ft3">Objet :</P>
 <P class="p4 ft3">Moyen de Transport :</P>
-<P class="p6 ft4">Ecole Nationale Supérieure d’Arts et Métiers – Casablanca</P>
+<P class="p6 ft4">Ecole Nationale SupÃ©rieure dâArts et MÃ©tiers â Casablanca</P>
     
 <TABLE id="Il1l1lIl1I11Ill1I1I1ll1l1" cellpadding=0 cellspacing=0 class="t2"></TABLE>
 <P class="p7 ft5">Web : <NOBR>www.ensam-casa.ma</NOBR></P>
