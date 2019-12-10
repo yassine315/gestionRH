@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!-- saved from url=(0014)about:internet -->
 <HTML>
@@ -152,3 +154,4 @@ function lI1IllI111IlI1I1llll1lIIl()
 </DIV>
 </BODY>
 </HTML>
+    

@@ -6,125 +6,62 @@
 package com.grh.beans;
 import java.util.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="module")
 
 public class Module {
+  @Id
+  @GeneratedValue
   
-   private int idModule;   
+   private int idModule;
+  @Column(name="ID_MODULE")
+  
    private String nomModule; 
+  @Column(name="NOM_MODULE")
+  
    private String semestreModule;
-   private Collection<Filiere> filiere;
-   private Collection<ElementModule> elementModule;
+  @Column(name="SEMESTRE_MODULE")
+  
+   private List<Filiere> filiere;
+   private List<ElementModule> elementModule;
+public int getIdModule() {
+	return idModule;
+}
+public void setIdModule(int idModule) {
+	this.idModule = idModule;
+}
+public String getNomModule() {
+	return nomModule;
+}
+public void setNomModule(String nomModule) {
+	this.nomModule = nomModule;
+}
+public String getSemestreModule() {
+	return semestreModule;
+}
+public void setSemestreModule(String semestreModule) {
+	this.semestreModule = semestreModule;
+}
+public List<Filiere> getFiliere() {
+	return filiere;
+}
+public void setFiliere(List<Filiere> filiere) {
+	this.filiere = filiere;
+}
+public List<ElementModule> getElementModule() {
+	return elementModule;
+}
+public void setElementModule(List<ElementModule> elementModule) {
+	this.elementModule = elementModule;
+}
    
    
-   /** @pdGenerated default getter */
-   public java.util.Collection<Filiere> getFiliere() {
-      if (filiere == null)
-         filiere = new java.util.HashSet<Filiere>();
-      return filiere;
-   }
-   
-   /** @pdGenerated default iterator getter */
-   public java.util.Iterator getIteratorFiliere() {
-      if (filiere == null)
-         filiere = new java.util.HashSet<Filiere>();
-      return filiere.iterator();
-   }
-   
-   /** @pdGenerated default setter
-     * @param newFiliere */
-   public void setFiliere(java.util.Collection<Filiere> newFiliere) {
-      removeAllFiliere();
-      for (java.util.Iterator iter = newFiliere.iterator(); iter.hasNext();)
-         addFiliere((Filiere)iter.next());
-   }
-   
-   /** @pdGenerated default add
-     * @param newFiliere */
-   public void addFiliere(Filiere newFiliere) {
-      if (newFiliere == null)
-         return;
-      if (this.filiere == null)
-         this.filiere = new java.util.HashSet<Filiere>();
-      if (!this.filiere.contains(newFiliere))
-      {
-         this.filiere.add(newFiliere);
-         newFiliere.addModule(this);      
-      }
-   }
-   
-   /** @pdGenerated default remove
-     * @param oldFiliere */
-   public void removeFiliere(Filiere oldFiliere) {
-      if (oldFiliere == null)
-         return;
-      if (this.filiere != null)
-         if (this.filiere.contains(oldFiliere))
-         {
-            this.filiere.remove(oldFiliere);
-            oldFiliere.removeModule(this);
-         }
-   }
-   
-   /** @pdGenerated default removeAll */
-   public void removeAllFiliere() {
-      if (filiere != null)
-      {
-         Filiere oldFiliere;
-         for (java.util.Iterator iter = getIteratorFiliere(); iter.hasNext();)
-         {
-            oldFiliere = (Filiere)iter.next();
-            iter.remove();
-            oldFiliere.removeModule(this);
-         }
-      }
-   }
-   /** @pdGenerated default getter */
-   public java.util.Collection<ElementModule> getElementModule() {
-      if (elementModule == null)
-         elementModule = new java.util.HashSet<ElementModule>();
-      return elementModule;
-   }
-   
-   /** @pdGenerated default iterator getter */
-   public java.util.Iterator getIteratorElementModule() {
-      if (elementModule == null)
-         elementModule = new java.util.HashSet<ElementModule>();
-      return elementModule.iterator();
-   }
-   
-   /** @pdGenerated default setter
-     * @param newElementModule */
-   public void setElementModule(java.util.Collection<ElementModule> newElementModule) {
-      removeAllElementModule();
-      for (java.util.Iterator iter = newElementModule.iterator(); iter.hasNext();)
-         addElementModule((ElementModule)iter.next());
-   }
-   
-   /** @pdGenerated default add
-     * @param newElementModule */
-   public void addElementModule(ElementModule newElementModule) {
-      if (newElementModule == null)
-         return;
-      if (this.elementModule == null)
-         this.elementModule = new java.util.HashSet<ElementModule>();
-      if (!this.elementModule.contains(newElementModule))
-         this.elementModule.add(newElementModule);
-   }
-   
-   /** @pdGenerated default remove
-     * @param oldElementModule */
-   public void removeElementModule(ElementModule oldElementModule) {
-      if (oldElementModule == null)
-         return;
-      if (this.elementModule != null)
-         if (this.elementModule.contains(oldElementModule))
-            this.elementModule.remove(oldElementModule);
-   }
-   
-   /** @pdGenerated default removeAll */
-   public void removeAllElementModule() {
-      if (elementModule != null)
-         elementModule.clear();
-   }
+  
 
 }

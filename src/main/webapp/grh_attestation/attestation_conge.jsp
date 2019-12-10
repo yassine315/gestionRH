@@ -8,7 +8,21 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<<<<<<< HEAD
 <TITLE>attestation de congé</TITLE>
+=======
+<%
+
+ String SOM = (String) request.getAttribute("SOM");
+
+
+
+
+
+%>
+
+<TITLE>Attestation de congé</TITLE>
+>>>>>>> a3dbe1d9646f6a0751d0bc59f747d683b6b41887
 <META name="ensam admin" content="attestation de congé">
 <STYLE type="text/css">
 
@@ -39,7 +53,7 @@ body {margin-top: 0px;margin-left: 0px;}
 .p2{text-align: left;padding-left: 338px;margin-top: 2px;margin-bottom: 0px;}
 .p3{text-align: left;padding-left: 85px;padding-right: 107px;margin-top: 17px;margin-bottom: 0px;text-indent: 19px;}
 .p4{text-align: left;padding-left: 85px;padding-right: 129px;margin-top: 20px;margin-bottom: 0px;text-indent: 19px;}
-.p5{text-align: left;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p5{text-align: left;margin-top: 0px;margin-right:-500px;margin-bottom: 0px;white-space: nowrap;}
 .p6{text-align: left;padding-left: 80px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p7{text-align: right;padding-right: 57px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p8{text-align: left;padding-left: 29px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
@@ -140,31 +154,15 @@ function lI1IllI111IlI1I1llll1lIIl()
 	var ll1II1IllIllIIIIllI1ll11I = IlIIl1Il1l1I11IlI1ll1II11(-1);
 	var l111l1Il1IlIlIl1l11lI1ll1 = lll1I111Illl1l1lI11lI1111(1, 1, "tr1 td2", -1);
 	var l1IIll1l1lI1lIl1IllI1llII = lll1I111Illl1l1lI11lI1111(1, 1, "tr1 td0", -1);
-	llIIl111III11l1Il111I11ll.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	lIlIlI1lI1lIlIIllIlI1IlII.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	l1IIll1l1lI1lIl1IllI1llII.innerHTML = "<P class=\"p5 ft3\">est accordé à </P>";
-	lI11Il11II1IIII1IIll1lIl1.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	IlI111lIlI1l1lIlIl111Il1l.innerHTML = "<P class=\"p5 ft3\"><SPAN class=\"ft6\">Art 1 :</SPAN> * Un congé administratif</P>";
-	II1IlIl11I1IllIlll1lIIllI.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	l11111l1I1111llI1IlIllI1I.innerHTML = "<P class=\"p7 ft3\">:</P>";
-	IIlIlIl1lII1IIl11l1III1Il.innerHTML = "<P class=\"p8 ft3\">SOM</P>";
-	lI1lllll111lIIllIllI1Il11.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	IllI11l11l1I11llII1IllIlI.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	I1IlIlIl1IIlI1IlII1l1I1l1.innerHTML = "<P class=\"p8 ft3\">Grade</P>";
+
+	IlI111lIlI1l1lIlIl111Il1l.innerHTML = "<P class=\"p5 ft3\"><SPAN class=\"ft6\">Art 1 :</SPAN> * Un congé administratif du <%= prof.getNomProf()+" au "+prof.getPrenomProf() %> est accordé à:</P>";
+	IIlIlIl1lII1IIl11l1III1Il.innerHTML = "<P class=\"p8 ft3\">SOM: <%= prof.getSom() %></P>";
+	I1IlIlIl1IIlI1IlII1l1I1l1.innerHTML = "<P class=\"p8 ft3\">Grade:</P>";
 	I1I1l1I1ll11llIIIIIl1lIll.innerHTML = "<P class=\"p5 ft8\">Fax : 00 212 522 562 093</P>";
-	l111l1Il1IlIlIl1l11lI1ll1.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	llIIll1lI1llI11lIl1IIII1l.innerHTML = "<P class=\"p7 ft3\">:</P>";
-	l11Il1lIlIIl11l1lIlIIl1II.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	IlI1I111IlI1111lI1IllIIll.innerHTML = "<P class=\"p6 ft3\">du</P>";
-	II1lllIl1lllIlIl1llIlI1l1.innerHTML = "<P class=\"p7 ft3\">:</P>";
 	llI1ll1lll1ll1I111I1IlIlI.innerHTML = "<P class=\"p5 ft8\">Tél. : 00 212 522 564 222</P>";
-	llll11111lIllllI1llII1111.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	lI1I11lIIII11llI1II1l11II.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
-	IIIIl1Il1IllI1II1ll1llIlI.innerHTML = "<P class=\"p8 ft3\">Nom et Prénom</P>";
+	IIIIl1Il1IllI1II1ll1llIlI.innerHTML = "<P class=\"p8 ft3\">Nom et Prénom: <%= prof.getNomProf()+" "+prof.getPrenomProf() %></P>";
 	lII1l1lII1II1llII1Illlll1.innerHTML = "<P class=\"p5 ft8\">Av. Nile, 150, Grand Casablanca – Maroc</P>";
-	IIl1111lIIlIlIll1lII1l1Il.innerHTML = "<P class=\"p5 ft3\">au</P>";
-	l11l11lI1l1lIll1IIl1Il11l.innerHTML = "<P class=\"p7 ft3\">:</P>";
-	l1I1ll11llI1IIl11l1IlII11.innerHTML = "<P class=\"p5 ft4\">&nbsp;</P>";
+
 	lllllIlIlIIlIIIl1lllIllIl.innerHTML = "<P class=\"p5 ft5\">Arrête ce qui suit :</P>";
 	IIIlIlI1I1l1IlllIIlIl1lII.appendChild(lI11Il11II1IIII1IIll1lIl1);
 	IIIlIlI1I1l1IlllIIlIl1lII.appendChild(lI1I11lIIII11llI1II1l11II);
@@ -203,7 +201,7 @@ function lI1IllI111IlI1I1llll1lIIl()
 
 </script>
 </HEAD>
-
+<!--window.print();  -->
 <BODY onload="window.print();lI1IllI111IlI1I1llll1lIIl()" >
 <DIV id="page_1">
 <DIV id="p1dimg1">

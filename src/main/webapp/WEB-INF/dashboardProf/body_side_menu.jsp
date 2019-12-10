@@ -25,7 +25,7 @@
                             <li><a href="/gestionRH/Attestation">Attestations</a></li>
                             <li><a href="/gestionRH/Demmande">Demandes</a></li>
                             <li><a href="/gestionRH/Recu">Reçus</a></li>
-                            <li><a href="#">Reprises de travail</a></li>
+                            <li><a href="/gestionRH/autre/reprise_travail.jsp">Reprises de travail</a></li>
                             <li><a href="#">Justificatifs</a></li>
                         </ul>
                     </li>
@@ -39,17 +39,15 @@
                         </ul>
                     </li>
                      -->
+                    
                     <li>
-                        <a href="#">Reprise travail</a>
-                    </li>
-                    <li>
-                        <a href="#">Grade</a>
+                        <a href="/gestionRH/Grade">Grade</a>
                     </li>
                 </ul>
 
                 <ul class="list-unstyled CTAs">
                     <!-- <li><a href="#" class="download">button</a></li> -->
-                    <li><a href="#" class="article">Deconnecter</a></li>
+                    <li><a href="/gestionRH/" class="article">Déconnecter</a></li>
                 </ul>
             </nav>
 

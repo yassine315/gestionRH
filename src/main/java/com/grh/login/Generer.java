@@ -25,6 +25,10 @@ public class Generer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private final String ATTESTATION = "/grh_attestation/";
+	private final String RECU = "/grh_recu/";
+	private final String DEMANDE = "/grh_demande/";
+	
+	
 	
 	private SessionFactory sessionFactory;
 	private int som;
@@ -81,6 +85,10 @@ public class Generer extends HttpServlet {
 				request.getServletContext().getRequestDispatcher(ATTESTATION+name).forward(request, response);
 				break;
 			case "recu":
+				request.getServletContext().getRequestDispatcher(this.RECU+name).forward(request, response);
+				break;
+			case "demande":
+				request.getServletContext().getRequestDispatcher(this.DEMANDE+name).forward(request, response);
 				break;
 				
 		}

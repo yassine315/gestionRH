@@ -59,6 +59,12 @@
   	<description></description>
   	<servlet-class>com.grh.login.Generer</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Grade</servlet-name>
+  	<display-name>Grade</display-name>
+  	<description></description>
+  	<servlet-class>com.grh.login.Grade</servlet-class>
+  </servlet>
   
  
   
@@ -69,6 +75,7 @@
   <servlet-mapping>
   	<servlet-name>Prof</servlet-name>
   	<url-pattern>/Prof</url-pattern>
+  	
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>AjouterProf</servlet-name>
@@ -97,6 +104,10 @@
   <servlet-mapping>
   	<servlet-name>Generer</servlet-name>
   	<url-pattern>/Generer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Grade</servlet-name>
+  	<url-pattern>/Grade</url-pattern>
   </servlet-mapping>
   
 </web-app>

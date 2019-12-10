@@ -22,7 +22,7 @@
 
 
 
-	<div class="row">
+	<div class="row" style="background : #fff ;">
 		
         
         <div class="col-md-12">
@@ -96,19 +96,55 @@
            <label class="element-animation2 btn btn-lg btn-primary btn-block">
            		<span class="btn-label">
            			<i class="glyphicon glyphicon-chevron-right"></i>
-           		</span> <a class="url-target" href="/gestionRH/Generer?type=attestation&name=attestation_travail.jsp&som=">Attestation travail</a>
+           		</span> <a class="url-target" href="/gestionRH/Generer?type=attestation&name=attestation_travail.jsp&som=">Attestation de travail</a>
            	</label>
           
           <label class="element-animation1 btn btn-lg btn-primary btn-block">
            	<span class="btn-label">
            		<i class="glyphicon glyphicon-chevron-right"></i>
            	</span>
-           <a class="url-target" href="/gestionRH/Generer?type=attestation&name=order_mission.jsp&som=">Order mission</a>
+           <a class="url-target" href="/gestionRH/Generer?type=attestation&name=order_mission.jsp&som=">Ordre de mission</a>
            	</label>
            	
+           	
+           	
            <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
-           		<a class="url-target" href="/gestionRH/Generer?type=attestation&name=quite_territoire.jsp&som=">Quitter de térritoire
+           		<a class="url-target" href="/gestionRH/Generer?type=attestation&name=quitte_territoire.jsp&som=">Quitter térritoire</a>
            </label>
+           
+           <label class="element-animation1 btn btn-lg btn-primary btn-block">
+           	<span class="btn-label">
+           		<i class="glyphicon glyphicon-chevron-right"></i>
+           	</span>
+           <a class="url-target" href="/gestionRH/Generer?type=demande&name=demande_attestation_travail.jsp&som=">Demande Attestation de Travail</a>
+           	</label>
+           	
+           	<label class="element-animation1 btn btn-lg btn-primary btn-block">
+           	<span class="btn-label">
+           		<i class="glyphicon glyphicon-chevron-right"></i>
+           	</span>
+           <a class="url-target" href="/gestionRH/Generer?type=demande&name=demande_attestation_salaire.jsp&som=">Demande Attestation de Salaire</a>
+           	</label>
+           	
+           	<label class="element-animation1 btn btn-lg btn-primary btn-block">
+           	<span class="btn-label">
+           		<i class="glyphicon glyphicon-chevron-right"></i>
+           	</span>
+           <a class="url-target" href="/gestionRH/Generer?type=demande&name=demande_quitter.jsp&som=">Demande Attestation de Quitte de Téritoire</a>
+           	</label>
+           	<label class="element-animation1 btn btn-lg btn-primary btn-block">
+           	<span class="btn-label">
+           		<i class="glyphicon glyphicon-chevron-right"></i>
+           	</span>
+           <a class="url-target" href="/gestionRH/Generer?type=recu&name=recu_medical.html&som=">Reçu Medical</a>
+           	</label>
+           	
+           	<label class="element-animation1 btn btn-lg btn-primary btn-block">
+           	<span class="btn-label">
+           		<i class="glyphicon glyphicon-chevron-right"></i>
+           	</span>
+           <a class="url-target" href="/gestionRH/Generer?type=recu&name=recu_document.html&som=">Reçu Document</a>
+           	</label>
        </div>
    </div>
 </div>
@@ -121,7 +157,7 @@
       <!-- /.modal-dialog --> 
     
     
-    
+    <!-- boit dialoge de editer -->
     <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
       <div class="modal-dialog">
     <div class="modal-content">
@@ -133,19 +169,76 @@
       <!-- formulaire de moification -->
       	<form class="form-horizontal" role="form">
                 <h2>Registration Form</h2>
+                
+                
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                    <label for="firstName" class="col-sm-3 control-label"> Prénom</label>
+                    
+                    
+                    
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
-                        <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+                        <input type="text" id="firstName" placeholder="Prénom" class="form-control" autofocus>
+                       
+                    </div>
+                    
+                </div>
+                
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label"> Nom</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="Nom" class="form-control" autofocus>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label class="control-label col-sm-3">SEX</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="femaleRadio" value="Female">Masculin
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="maleRadio" value="Male">Féminin
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-group">
+                    <label for="text" class="col-sm-3 control-label">Lieu de Naissance</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="text" placeholder="Lieu de Naissance" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <label for="text" class="col-sm-3 control-label">Adresse</label>
                     <div class="col-sm-9">
-                        <input type="email" id="email" placeholder="Email" class="form-control">
+                        <input type="text" id="text" placeholder="Adresse" class="form-control">
                     </div>
                 </div>
+                
+                <div class="form-group">
+                    <label for="text" class="col-sm-3 control-label">Adresse Cas Urgent</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="text" placeholder="Adresse Cas Urgent" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tel" class="col-sm-3 control-label">Tél</label>
+                    <div class="col-sm-9">
+                        <input type="tel" id="tel" placeholder="Tél" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tel" class="col-sm-3 control-label">Tél Cas Urgent</label>
+                    <div class="col-sm-9">
+                        <input type="tel" id="tel" placeholder="Tél Cas Urgent" class="form-control">
+                    </div>
+                </div>
+                
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-9">
@@ -173,28 +266,7 @@
                         </select>
                     </div>
                 </div> <!-- /.form-group -->
-                <div class="form-group">
-                    <label class="control-label col-sm-3">Gender</label>
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" id="femaleRadio" value="Female">Female
-                                </label>
-                            </div>
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" id="maleRadio" value="Male">Male
-                                </label>
-                            </div>
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" id="uncknownRadio" value="Unknown">Unknown
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- /.form-group -->
+                 <!-- /.form-group -->
                 <div class="form-group">
                     <label class="control-label col-sm-3">Meal Preference</label>
                     <div class="col-sm-9">
@@ -233,6 +305,7 @@
         </div>
         </div>
         </div>
+        </div>
     <!-- /.modal-content --> 
 
 <!--  -->
@@ -262,9 +335,8 @@
 	     var som = $(this).data("id");
 	     $('.url-target').each(function(){ 
 	            var oldUrl = $(this).attr("href"); // Get current url
-	          
 	            $(this).attr("href",replaceUrlParam(oldUrl,'som',som) ); // Set herf value
-	        });
+	         	});
 	     
 	});
 </script>

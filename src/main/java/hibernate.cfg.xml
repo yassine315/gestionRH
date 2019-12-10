@@ -51,20 +51,21 @@
       </property>
       
       <!-- 
-      <mapping class="com.beans.Action" />
-      <mapping class="com.beans.Actions" />
-      <mapping class="com.beans.Attestation" />
-      <mapping class="com.beans.Conge" />
-      <mapping class="com.beans.Departement" />
-      <mapping class="com.beans.Diplome" />
-      <mapping class="com.beans.DroitUt" />
-      <mapping class="com.beans.ElementModule" />
-      <mapping class="com.beans.Enseigner" />
-      <mapping class="com.beans.Filiere" />
-      <mapping class="com.beans.Grade" />
-      <mapping class="com.beans.Mission" />
-      <mapping class="com.beans.Module" />
+      <mapping class="com.beans.grh.Action" />
+      <mapping class="com.beans.grh.Actions" />
+      <mapping class="com.beans.grh.Attestation" />
+      <mapping class="com.beans.grh.Conge" />
+      <mapping class="com.beans.grh.Departement" />
+      <mapping class="com.grh.beans.Diplome" />
+      <mapping class="com.grh.beans.DroitUt" />
+      <mapping class="com.grh.beans.ElementModule" />
+      <mapping class="com.grh.beans.Enseigner" />
+      <mapping class="com.grh.beans.Filiere" />
+      
+      <mapping class="com.beans.grh.Mission" />
+      <mapping class="com.beans.grh.Module" />
       -->
+      <mapping class="com.grh.beans.Grade" />
       <mapping class="com.grh.beans.Prof" />
       <!-- 
       <mapping class="com.beans.QuitterTerrit" />

@@ -6,12 +6,21 @@
 package com.grh.beans;
 import java.util.*;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Actions")
 
 public class Actions {
-   
+   @Id
+   @GeneratedValue
  private int idAction;  
- private java.util.Date dateAction;  
- private java.util.Date heureAction;  
- private java.lang.String nomAction;
+   
+ private Date dateAction;  
+ private Date heureAction;  
+ private String nomAction;
 
 }
