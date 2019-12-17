@@ -5,19 +5,22 @@
             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3><a href=""/gestionRH/Prof">ENSAM admin</a></h3>
+                    <h3><a href="/gestionRH/Login">ENSAM admin</a></h3>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>Administrer les professeurs</p>
-                    <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Filieres</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="/gestionRH/AjouterFiliere">Ajouter</a></li>
-                            <li><a href="/gestionRH/Prof">Consulter</a></li>
-                
+                    <p>Gestion des filières</p>
+                  
+                    
+                     <li class="active">
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Filières</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="/gestionRH/AjouterFiliere">Ajouter filière</a></li>
+                            <li><a href="#">Consulter filières</a></li>
+                        
                         </ul>
                     </li>
+                    
                     <!-- 
                     <li class="active">
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Documents</a>
@@ -40,11 +43,12 @@
                     </li>
                      -->
                     <li>
-                        <a href="#">Reprise travail</a>
+                        <a href="/gestionRH/AjouterDepartement">Ajouter departement</a>
                     </li>
-                    <li>
-                        <a href="#">Grade</a>
+                      <li>
+                        <a href="/gestionRH/AjouterModule">Ajouter module</a>
                     </li>
+                  
                 </ul>
 
                 <ul class="list-unstyled CTAs">

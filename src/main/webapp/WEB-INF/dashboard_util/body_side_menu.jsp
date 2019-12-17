@@ -5,7 +5,7 @@
             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3><a href=""/gestionRH/Prof">ENSAM admin</a></h3>
+                    <h3><a href="/gestionRH/Login">ENSAM admin</a></h3>
                 </div>
 
                 <ul class="list-unstyled components">

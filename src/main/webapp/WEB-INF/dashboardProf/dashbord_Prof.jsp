@@ -72,6 +72,7 @@
 
 
 <div class="modal fade" id="generer"  role="dialog" aria-labelledby="edit" aria-hidden="true">
+
       <div class="modal-dialog">
     <div class="modal-content">
           <div class="modal-header">
@@ -167,26 +168,27 @@
       </div>
       <div class="modal-body">
       <!-- formulaire de moification -->
-      	<form class="form-horizontal" role="form">
-                <h2>Registration Form</h2>
+<form action="/ModifierProf" method="post"  class="form-horizontal" role="form">
                 
                 
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label"> Prénom</label>
-                    
-                    
-                    
+                    <label for="SOM" class="col-sm-3 control-label"> SOM</label>     
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="Prénom" class="form-control" autofocus>
-                       
-                    </div>
-                    
+                        <input type="text" name="som" id="SOM" placeholder="SOM" class="form-control" autofocus>       
+                    </div>                  
+                </div>
+                
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label"> Prénom</label>     
+                    <div class="col-sm-9">
+                        <input type="text" name="prenom" id="firstName" placeholder="Prénom" class="form-control" autofocus>       
+                    </div>                  
                 </div>
                 
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label"> Nom</label>
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="Nom" class="form-control" autofocus>
+                        <input type="text" name="nom" id="firstName" placeholder="Nom" class="form-control" autofocus>
                     </div>
                     </div>
                     <div class="form-group">
@@ -195,113 +197,125 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="femaleRadio" value="Female">Masculin
+                                    <input type="radio" name="sex" id="maleRadio" value="masculin">Masculin
                                 </label>
                             </div>
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="maleRadio" value="Male">Féminin
+                                    <input type="radio" name="sex" id="femaleRadio" value="feminin">Féminin
                                 </label>
                             </div>
                             
                         </div>
                     </div>
                 </div>
+                 <div class="form-group">
+                    <label for="text" class="col-sm-3 control-label">Date de Naissance</label>
+                    <div class="col-sm-9">
+                        <input type="date" name="dateNaissance" id="text" placeholder="Date de Naissance" class="form-control">
+                    </div>
+                </div>
                     <div class="form-group">
                     <label for="text" class="col-sm-3 control-label">Lieu de Naissance</label>
                     <div class="col-sm-9">
-                        <input type="text" id="text" placeholder="Lieu de Naissance" class="form-control">
+                        <input type="text" name="lieuNaissance" id="text" placeholder="Lieu de Naissance" class="form-control">
                     </div>
                 </div>
+                
+                
+                <div class="form-group">
+                    <label for="nationalite" class="col-sm-3 control-label">Nationalité</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="nationalite" id="nationalite" placeholder="Nationalité" class="form-control">
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <label for="CIN" class="col-sm-3 control-label">CIN </label>
+                    <div class="col-sm-9">
+                        <input type="text" name="cin" id="CIN" placeholder="CIN" class="form-control">
+                    </div>
+                </div>
+                
                 <div class="form-group">
                     <label for="text" class="col-sm-3 control-label">Adresse</label>
                     <div class="col-sm-9">
-                        <input type="text" id="text" placeholder="Adresse" class="form-control">
+                        <input type="text" name="adresse" id="text" placeholder="Adresse" class="form-control">
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="text" class="col-sm-3 control-label">Adresse Cas Urgent</label>
                     <div class="col-sm-9">
-                        <input type="text" id="text" placeholder="Adresse Cas Urgent" class="form-control">
+                        <input type="text" name="adresseCasUrgent" id="text" placeholder="Adresse Cas Urgent" class="form-control">
+                    </div>
+                </div>
+               <div class="form-group">
+                    <label for="text" class="col-sm-3 control-label">E-mail</label>
+                    <div class="col-sm-9">
+                        <input type="email" name="email" id="text" placeholder="E-mail" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="tel" class="col-sm-3 control-label">Tél</label>
                     <div class="col-sm-9">
-                        <input type="tel" id="tel" placeholder="Tél" class="form-control">
+                        <input type="tel" name="tel" id="tel" placeholder="Tél" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="tel" class="col-sm-3 control-label">Tél Cas Urgent</label>
                     <div class="col-sm-9">
-                        <input type="tel" id="tel" placeholder="Tél Cas Urgent" class="form-control">
+                        <input type="tel" name="telCasUrgent" id="tel" placeholder="Tél Cas Urgent" class="form-control">
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <label for="fonction" class="col-sm-3 control-label">Fonction</label>
                     <div class="col-sm-9">
-                        <input type="password" id="password" placeholder="Password" class="form-control">
+                        <input type="text"  name="fonction" id="fonction" placeholder="Fonction" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                    <label for="etatCivil" class="col-sm-3 control-label">Etat Civil</label>
                     <div class="col-sm-9">
-                        <input type="date" id="birthDate" class="form-control">
+                        <input type="text" name="etatCivil" id="etatCivil" placeholder="Etat Civil" class="form-control">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="country" class="col-sm-3 control-label">Country</label>
+                  <div class="form-group">
+                    <label for="SituAct" class="col-sm-3 control-label">Situation Actuelle</label>
                     <div class="col-sm-9">
-                        <select id="country" class="form-control">
-                            <option>Afghanistan</option>
-                            <option>Bahamas</option>
-                            <option>Cambodia</option>
-                            <option>Denmark</option>
-                            <option>Ecuador</option>
-                            <option>Fiji</option>
-                            <option>Gabon</option>
-                            <option>Haiti</option>
-                        </select>
+                        <input type="text" name="situationActuelle" id="SituAct" placeholder="Situation Actuelle" class="form-control">
                     </div>
-                </div> <!-- /.form-group -->
+                </div>
+                   <div class="form-group">
+                    <label for="nbEnfant" class="col-sm-3 control-label">Nombre d'enfants</label>
+                    <div class="col-sm-9">
+                        <input type="number" name="nombreEnfant" id="nbEnfant" placeholder="Nombre d'enfants" class="form-control">
+                    </div>
+                </div>
+                   <div class="form-group">
+                    <label for="affectation" class="col-sm-3 control-label">Affectation</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="affectation" id="affectation"  placeholder="Affectation" class="form-control">
+                    </div>
+                </div>
+                     <div class="form-group">
+                    <label for="CodeAffectation" class="col-sm-3 control-label">Code Affectation</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="codeAffectation" id="CodeAffectation"  placeholder="Code Affectation" class="form-control">
+                    </div>
+                </div>
+               
+              <!-- /.form-group -->
                  <!-- /.form-group -->
-                <div class="form-group">
-                    <label class="control-label col-sm-3">Meal Preference</label>
-                    <div class="col-sm-9">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="calorieCheckbox" value="Low calorie">Low calorie
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="saltCheckbox" value="Low salt">Low salt
-                            </label>
-                        </div>
-                    </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">I accept <a href="#">terms</a>
-                            </label>
-                        </div>
-                    </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3">
-                        <button type="submit" class="btn btn-primary btn-block">Register</button>
-                    </div>
-       
-       
-      </div>
+               <!-- /.form-group -->
+                <!-- /.form-group -->
+            
         <div class="modal-footer ">
-        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Modifier</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Anuller</button>
+        <button type="submit" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Modifier</button>
+        <button type="reset" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Anuller</button>
+      
       </div>
+      </form>
         </div>
         </div>
         </div>
@@ -316,6 +330,11 @@
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
+
+<!--  script pour boit e dialogue -->
+
+
+</script>
   <script type="text/javascript"> 
 
   function replaceUrlParam(url, paramName, paramValue)
@@ -339,10 +358,6 @@
 	         	});
 	     
 	});
-</script>
-<!--  script pour boit e dialogue -->
-
-
 </script>
 </body>
 </html>

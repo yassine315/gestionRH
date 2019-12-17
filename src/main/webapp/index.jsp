@@ -6,9 +6,32 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Authentification</title>
+<style>
+h2 {
+    font-family: Gill Sans, Verdana;
+	font-size: 25px;
+	color:#295694;
+	margin-left: 170px;
+}
+ p{
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+
+}
+body {
+      background-image:url(./images/ensammbg.jpg);
+	background-size:cover;
+    background-repeat: no-repeat;
+	height: 100%;}
+</style>
 </head>
 <body>
+<table>
+	<tr>
+		<td colspan="3"><img src="./images/ensambg.png" ></td>
+		<td><p style="color: #3f4d66;"><h2>Gestion Ressources Humaines</h2></p></td>
+		</tr>
+		</table>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -31,7 +54,7 @@
 							</div>
 
 							<div >
-								<p><a href="">mot de passe oublie</a></p>
+								<p><a href="">mot de passe oublié</a></p>
 							</div>
 							<button class="btn btn-lg btn-primary btn-block text-uppercase"
 								type="submit" >Sign in</button>

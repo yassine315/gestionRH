@@ -1,6 +1,7 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import="com.grh.beans.Grade,java.util.List" %>
+    <% List<Grade> grades = (List)request.getAttribute("grades"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,30 +24,30 @@
         <div class="container-fluid" >
             <div class="signup-content">
                 <div class="signup-form">
-                    <form method="POST"  id="register-form">
+                    <form action="/gestionRH/AjouterProf" method="GET"  id="register-form">
                         <h2>Ajouter un Professeur</h2>
                             <div class="form-group">       
                             <label for="id"> SOM :</label>
-                            <input type="text" name="id" id="id" required/>
+                            <input type="text" name="som" id="id" required/>
                         </div>
                         <div class="form-row">
                         <div class="form-group">
                                 <label for="Nom">Nom :</label>
-                                <input type="text" name="Nom" id="Nom" required/>
+                                <input type="text" name="nom" id="Nom" required/>
                             </div>
                             <div class="form-group">
                                 <label for="Prénom">Prénom :</label>
-                                <input type="text" name="Prénom" id="Prénom" required/>
+                                <input type="text" name="prenom" id="Prénom" required/>
                             </div>
                         </div>
                          <div class="form-row">
                         <div class="form-group">
                                 <label for="date de naissance">Date de naissance :</label>
-                                <input type="text" name="date de naissance" id="date de naissance" required/>
+                                <input type="text" name="naissance" id="date de naissance" required/>
                             </div>
                             <div class="form-group">
                                 <label for="Lieu">Lieu :</label>
-                                <input type="text" name="Lieu" id="Lieu" required/>
+                                <input type="text" name="lieu" id="Lieu" required/>
                             </div>
                         </div>
 
@@ -56,36 +57,43 @@
                              <label for="tel">Tel :</label>
                             <input type="text" name="tel" id="tel" required/>
                              <label for="Contact">Contact en cas d'urgence :</label>
-                            <input type="text" name="Contact" id="Contact" required/>
+                            <input type="text" name="contact" id="Contact" required/>
                         </div>
-                        <div class="form-radio">
+                        <div class="form-group">
+   						 <label for="grade">Grade</label>
+  							  <select name="grade" class="form-control" id="grade" >
+							      <%for(Grade grade : grades){ %>
+							      <option value="<%=grade.getIdGrade()%>"><%= grade.getCadreGrade()+"      "+grade.getGrade()+"      "+grade.getEchelon() %></option>
+							      <% } %>
+    							</select>
+                        <div class="form-group">
                             <label for="Genre" class="radio-label">Sex :</label>
                             <div class="form-radio-item">
-                                <input type="radio" name="Genre" id="Homme" checked>
+                                <input type="radio" name="genre" id="Homme" checked>
                                 <label for="Homme">Homme</label>
                                 <span class="check"></span>
                             </div>
                             <div class="form-radio-item">
-                                <input type="radio" name="Genre" id="femme">
+                                <input type="radio" name="genre" id="femme">
                                 <label for="femme">Femme</label>
                                 <span class="check"></span>
                             </div>
                             </div>
                             <div class="form-group">
                                 <label for="nationalité">Nationalité :</label>
-                                <input type="text" name="nationalité" id="nationalité" required/>
+                                <input type="text" name="nationalite" id="nationalité" required/>
                             <label for="etat civil">Etat civil :</label>
-                            <input type="text" name="etat civil" id="etat civil" required/>
+                            <input type="text" name="etatCivil" id="etat civil" required/>
                               <label for="fonction">Fonction :</label>
                               <input type="text" name="fonction" id="fonction" required/>
                               <label for="nbrEnfant">Nombre d'enfants :</label>
-                              <input type="text" name="nbrEnfant" id="nbrEnfant" required/>
+                              <input type="number" name="nbrEnfant" id="nbrEnfant" required/>
                             </div>
                         
                   
                         <div class="form-group">
                             <label for="Affectation">Affectation :</label>
-                            <input type="text" name="Affectation" id="Affectation">
+                            <input type="text" name="affectation" id="Affectation">
                         </div>
                         <div class="form-group">
                             <label for="codeAff">Code affectation :</label>
@@ -96,10 +104,10 @@
                             <label for="email">Email :</label>
                             <input type="email" name="email" id="email" />
                             <label for="Photo">Photo :</label>
-                            <input type="file"  accept="image/gif,image/jpg, image/jpeg, image/png" required name='img'/>
+                            <input type="file"  accept="image/gif,image/jpg, image/jpeg, image/png" name='img'/>
                         </div>
                         <div class="form-submit">
-                            <input type="submit" value="Annuler" class="submit" name="reset" id="reset" />
+                            <input type="reset" value="Annuler" class="submit" name="reset" id="reset" />
                             <input type="submit" value="Ajouter" class="submit" name="submit" id="submit" />
                         </div>
                     </form>

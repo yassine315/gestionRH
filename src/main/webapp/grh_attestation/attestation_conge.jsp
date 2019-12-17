@@ -8,9 +8,9 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<<<<<<< HEAD
-<TITLE>attestation de congé</TITLE>
-=======
+
+
+
 <%
 
  String SOM = (String) request.getAttribute("SOM");
@@ -22,7 +22,7 @@
 %>
 
 <TITLE>Attestation de congé</TITLE>
->>>>>>> a3dbe1d9646f6a0751d0bc59f747d683b6b41887
+
 <META name="ensam admin" content="attestation de congé">
 <STYLE type="text/css">
 
