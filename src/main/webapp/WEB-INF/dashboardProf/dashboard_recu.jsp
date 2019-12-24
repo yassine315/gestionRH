@@ -20,11 +20,7 @@
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
             <h6 class="card-price text-center">Reçu Depot document</h6>
-            <form class="form" action="./grh_recu/recu_document.html" method="post">
-            	<label for="som">SOM :</label><br/>
-            	<input type="number" id="som" name="som" />
-            	<button  type="submit" class="btn btn-block btn-primary text-uppercase">Generer</button>
-            </form>
+            
             
           </div>
         </div>
@@ -34,11 +30,7 @@
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
            <h6 class="card-price text-center">Reçu d'attestation medical </h6>
-            <form class="form" action="./grh_recu/recu_medical.html" method="post">
-            	<label for="som">SOM :</label><br/>
-            	<input type="number" id="som" name="som" />
-            	<button  type="submit" class="btn btn-block btn-primary text-uppercase">Generer</button>
-            </form>
+            
         </div>
       </div>
       </div>

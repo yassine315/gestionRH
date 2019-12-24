@@ -9,7 +9,10 @@ import java.util.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -18,15 +21,19 @@ import javax.persistence.Table;
 public class Prof {
    
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name="ID_PROF")
   private int idProf;
+  
+  @ManyToOne
+  @JoinColumn(name="ID_GRADE", nullable=false)
+  private Grade grade;
   
   
   @Column(name="CIN_PROF")
 	private String cinProf;
   
-@Column(name="NOM_PROF")
+  @Column(name="NOM_PROF")
 	private String nomProf;
    
   @Column(name="PRENOM_PROF")
@@ -35,19 +42,19 @@ public class Prof {
   @Column(name="SOM") 
 	private String som;  
   
-  @Column(name="ADRESSE")
+  @Column(name="ADRESSE", nullable=true)
 	private String adresse;
    
   @Column(name="SEXE")
 	private String sex;
    
-  @Column(name="ADDCASURG")
+  @Column(name="ADDCASURG", nullable = true)
 	private String addCasUrg;  
    
   @Column(name="TELCASURG")
 	private String telCasUrg;
    
-  @Column(name="FONCTION")
+  @Column(name="FONCTION", nullable = true)
 	private String fonction;
    
   @Column(name="CODE_AFF")
@@ -59,22 +66,22 @@ public class Prof {
   @Column(name="DATE_NAISS")
 	private Date dateNaiss;
    
-  @Column(name="SITUATION_ACT")
+  @Column(name="SITUATION_ACT", nullable = true)
 	private String situationAct;
    
-  @Column(name="ETAT_CIVIL")
+  @Column(name="ETAT_CIVIL", nullable= true)
 	private String etatCivil;
   
   @Column(name="NATIONALITE")
 	private String nationalite;
  
-  @Column(name="AFFECTATION")
+  @Column(name="AFFECTATION" , nullable = true)
 	private String affectation;
   
-  @Column(name="MP")
+  @Column(name="MP", nullable = true)
 	private String mp;
    
-  @Column(name="ETAT_REPRISE")
+  @Column(name="ETAT_REPRISE" , nullable = true)
 	private boolean etatReprise;
    
   @Column(name="EMAIL_PROF")
@@ -219,6 +226,61 @@ public class Prof {
 	public void setNbEnfants(int nbEnfants) {
 		this.nbEnfants = nbEnfants;
 	}
+	
+	
+	public Prof( String nomProf, String prenomProf, String som, String adresse, String sex,
+			String telCasUrg,  String codeAff, String lieuxNaiss, Date dateNaiss,
+			 String etatCivil, String nationalite, String affectation,
+		 String emailProf, int nbEnfants, Grade grade)
+	{
+		super();
+		this.nomProf = nomProf;
+		this.prenomProf = prenomProf;
+		this.som = som;
+		this.adresse = adresse;
+		this.sex = sex;
+		this.telCasUrg = telCasUrg;
+		this.codeAff = codeAff;
+		this.lieuxNaiss = lieuxNaiss;
+		this.dateNaiss = dateNaiss;
+		this.etatCivil = etatCivil;
+		this.nationalite = nationalite;
+		this.affectation = affectation;
+		this.emailProf = emailProf;
+		this.nbEnfants = nbEnfants;
+		this.grade = grade;
+	}
+	public Prof() {
+		super();
+	}
+	public Prof(Grade grade, String cinProf, String nomProf, String prenomProf, String som, String adresse, String sex,
+			String addCasUrg, String telCasUrg, String fonction, String codeAff, String lieuxNaiss, Date dateNaiss,
+			String situationAct, String etatCivil, String nationalite, String affectation, String mp,
+			boolean etatReprise, String emailProf, int nbEnfants) {
+		super();
+		this.grade = grade;
+		this.cinProf = cinProf;
+		this.nomProf = nomProf;
+		this.prenomProf = prenomProf;
+		this.som = som;
+		this.adresse = adresse;
+		this.sex = sex;
+		this.addCasUrg = addCasUrg;
+		this.telCasUrg = telCasUrg;
+		this.fonction = fonction;
+		this.codeAff = codeAff;
+		this.lieuxNaiss = lieuxNaiss;
+		this.dateNaiss = dateNaiss;
+		this.situationAct = situationAct;
+		this.etatCivil = etatCivil;
+		this.nationalite = nationalite;
+		this.affectation = affectation;
+		this.mp = mp;
+		this.etatReprise = etatReprise;
+		this.emailProf = emailProf;
+		this.nbEnfants = nbEnfants;
+	}
+	
 	
 	
 

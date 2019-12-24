@@ -24,6 +24,7 @@ public class Grade extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	SessionFactory sessionFactory;
+	List<com.grh.beans.Grade> grades ;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -50,7 +51,7 @@ public class Grade extends HttpServlet {
 		criteriaQuery.select(root);
 		
 		Query<com.grh.beans.Grade> query = session.createQuery(criteriaQuery);
-		List<com.grh.beans.Grade> grades = query.list();
+		grades = query.list();
 		session.getTransaction().commit();
 		session.close();
 		

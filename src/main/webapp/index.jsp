@@ -14,20 +14,20 @@
 			<div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 				<div class="card card-signin my-5">
 					<div class="card-body">
-						<h5 class="card-title text-center">Sign In</h5>
+						<h5 class="card-title text-center">S'authentifier</h5>
 						<form class="form-signin" method="post" action="/gestionRH/Login">
 							<div class="form-label-group">
 							<label
-									for="inputEmail">Email address</label>
+									for="inputEmail">Address Email</label>
 								<input type="email" id="inputEmail" class="form-control"
-									placeholder="Email address" required autofocus> 
+									placeholder="Address Email" required autofocus> 
 							</div>
 
 							<div class="form-label-group">
 							 <label
-									for="inputPassword">Password</label>
+									for="inputPassword">Mot de passe</label>
 								<input type="password" id="inputPassword" class="form-control"
-									placeholder="Password" required>
+									placeholder="Mot de pass" required>
 							</div>
 
 							<div >

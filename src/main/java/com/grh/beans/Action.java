@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class Action { 
    
 	@Id
-	  @GeneratedValue
+	@GeneratedValue
 	private int id_act;
 	@Column(name="ID_ACTION")
 	
