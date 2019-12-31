@@ -1,68 +1,49 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<web-app 
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
   <display-name>Archetype Created Web Application</display-name>
   
   <servlet>
   	<servlet-name>Login</servlet-name>
-  	<display-name>Login</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Login</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Prof</servlet-name>
-  	<display-name>Prof</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Prof</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>AjouterProf</servlet-name>
-  	<display-name>AjouterProf</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.AjouterProf</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Attestation</servlet-name>
-  	<display-name>Attestation</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Attestation</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Demmande</servlet-name>
-  	<display-name>Demmande</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Demmande</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Recu</servlet-name>
-  	<display-name>Recu</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Recu</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>AjouterFiliere</servlet-name>
-  	<display-name>AjouterFiliere</display-name>
-  	<description></description>
   	<servlet-class>com.grh.filiere.AjouterFiliere</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Utilisateur</servlet-name>
-  	<display-name>Utilisateur</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Utilisateur</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Generer</servlet-name>
-  	<display-name>Generer</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Generer</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Grade</servlet-name>
-  	<display-name>Grade</display-name>
-  	<description></description>
   	<servlet-class>com.grh.login.Grade</servlet-class>
   </servlet>
   
