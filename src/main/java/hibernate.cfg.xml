@@ -65,11 +65,12 @@
       -->
       <mapping class="com.grh.beans.Grade" />
       <mapping class="com.grh.beans.Prof" />
+      <mapping class="com.grh.beans.Utilisateur" />
+      
       <!-- 
       <mapping class="com.beans.QuitterTerrit" />
       <mapping class="com.beans.Section" />
       <mapping class="com.beans.Segrader" />
-      <mapping class="com.beans.Utilisateur" />
       -->
       
       

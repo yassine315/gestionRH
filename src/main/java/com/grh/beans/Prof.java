@@ -9,6 +9,7 @@ import java.util.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,7 +19,7 @@ import javax.persistence.Table;
 public class Prof {
    
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name="ID_PROF")
   private int idProf;
   
