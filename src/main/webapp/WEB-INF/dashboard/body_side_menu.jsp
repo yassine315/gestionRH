@@ -9,7 +9,7 @@
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>Adminestrer</p>
+                    <p>Administrer</p>
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Proffesseurs</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">

@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -25,8 +26,8 @@ public class Prof {
   @Column(name="ID_PROF")
   private int idProf;
   
-  @ManyToOne
-  @JoinColumn(name="ID_GRADE", nullable=false)
+  @OneToOne
+  @JoinColumn(name="ID_GRADE")
   private Grade grade;
   
   
@@ -51,6 +52,15 @@ public class Prof {
   @Column(name="ADDCASURG", nullable = true)
 	private String addCasUrg;  
    
+  @Column(name="DATE_RECRUTMENT")
+  	private Date dateRecrutement;
+  
+  @Column(name="NOM_ARABE")
+  private String nomAr;
+  
+  @Column(name="PRENOM_ARABE")
+  private String prenomAr;
+  
   @Column(name="TELCASURG")
 	private String telCasUrg;
    
@@ -99,139 +109,12 @@ public class Prof {
 	private List<Mission> mission;
 	private List<Diplome> diplome;
 	*/
-	
-	public int getIdProf() {
-		return idProf;
-	}
-	public void setIdProf(int idProf) {
-		this.idProf = idProf;
-	}
-	public String getCinProf() {
-		return cinProf;
-	}
-	public void setCinProf(String cinProf) {
-		this.cinProf = cinProf;
-	}
-	public String getNomProf() {
-		return nomProf;
-	}
-	public void setNomProf(String nomProf) {
-		this.nomProf = nomProf;
-	}
-	public String getPrenomProf() {
-		return prenomProf;
-	}
-	public void setPrenomProf(String prenomProf) {
-		this.prenomProf = prenomProf;
-	}
-	public String getSom() {
-		return som;
-	}
-	public void setSom(String som) {
-		this.som = som;
-	}
-	public String getAdresse() {
-		return adresse;
-	}
-	public void setAdresse(String adresse) {
-		this.adresse = adresse;
-	}
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-	public String getAddCasUrg() {
-		return addCasUrg;
-	}
-	public void setAddCasUrg(String addCasUrg) {
-		this.addCasUrg = addCasUrg;
-	}
-	public String getTelCasUrg() {
-		return telCasUrg;
-	}
-	public void setTelCasUrg(String telCasUrg) {
-		this.telCasUrg = telCasUrg;
-	}
-	public String getFonction() {
-		return fonction;
-	}
-	public void setFonction(String fonction) {
-		this.fonction = fonction;
-	}
-	public String getCodeAff() {
-		return codeAff;
-	}
-	public void setCodeAff(String codeAff) {
-		this.codeAff = codeAff;
-	}
-	public String getLieuxNaiss() {
-		return lieuxNaiss;
-	}
-	public void setLieuxNaiss(String lieuxNaiss) {
-		this.lieuxNaiss = lieuxNaiss;
-	}
-	public Date getDateNaiss() {
-		return dateNaiss;
-	}
-	public void setDateNaiss(Date dateNaiss) {
-		this.dateNaiss = dateNaiss;
-	}
-	public String getSituationAct() {
-		return situationAct;
-	}
-	public void setSituationAct(String situationAct) {
-		this.situationAct = situationAct;
-	}
-	public String getEtatCivil() {
-		return etatCivil;
-	}
-	public void setEtatCivil(String etatCivil) {
-		this.etatCivil = etatCivil;
-	}
-	public String getNationalite() {
-		return nationalite;
-	}
-	public void setNationalite(String nationalite) {
-		this.nationalite = nationalite;
-	}
-	public String getAffectation() {
-		return affectation;
-	}
-	public void setAffectation(String affectation) {
-		this.affectation = affectation;
-	}
-	public String getMp() {
-		return mp;
-	}
-	public void setMp(String mp) {
-		this.mp = mp;
-	}
-	public boolean isEtatReprise() {
-		return etatReprise;
-	}
-	public void setEtatReprise(boolean etatReprise) {
-		this.etatReprise = etatReprise;
-	}
-	public String getEmailProf() {
-		return emailProf;
-	}
-	public void setEmailProf(String emailProf) {
-		this.emailProf = emailProf;
-	}
-	public int getNbEnfants() {
-		return nbEnfants;
-	}
-	public void setNbEnfants(int nbEnfants) {
-		this.nbEnfants = nbEnfants;
-	}
-	
+  
 	
 	public Prof( String nomProf, String prenomProf, String som, String adresse, String sex,
 			String telCasUrg,  String codeAff, String lieuxNaiss, Date dateNaiss,
 			 String etatCivil, String nationalite, String affectation,
-		 String emailProf, int nbEnfants, Grade grade)
+		 String emailProf, int nbEnfants, Grade grade,Date dateRecrutemenT,String nomar,String prenomar,String cin)
 	{
 		super();
 		this.nomProf = nomProf;
@@ -246,17 +129,222 @@ public class Prof {
 		this.etatCivil = etatCivil;
 		this.nationalite = nationalite;
 		this.affectation = affectation;
+		this.nomAr=nomar;
+		this.prenomAr=prenomar;
 		this.emailProf = emailProf;
 		this.nbEnfants = nbEnfants;
 		this.grade = grade;
+		this.dateRecrutement=dateRecrutemenT;
+		this.cinProf=cin;
 	}
+	
+	public int getIdProf() {
+		return idProf;
+	}
+
+	public void setIdProf(int idProf) {
+		this.idProf = idProf;
+	}
+
+	public Grade getGrade() {
+		return grade;
+	}
+
+	public void setGrade(Grade grade) {
+		this.grade = grade;
+	}
+
+	public String getCinProf() {
+		return cinProf;
+	}
+
+	public void setCinProf(String cinProf) {
+		this.cinProf = cinProf;
+	}
+
+	public String getNomProf() {
+		return nomProf;
+	}
+
+	public void setNomProf(String nomProf) {
+		this.nomProf = nomProf;
+	}
+
+	public String getPrenomProf() {
+		return prenomProf;
+	}
+
+	public void setPrenomProf(String prenomProf) {
+		this.prenomProf = prenomProf;
+	}
+
+	public String getNomAr() {
+		return nomAr;
+	}
+
+	public void setNomAr(String nomAr) {
+		this.nomAr = nomAr;
+	}
+
+	public String getPrenomAr() {
+		return prenomAr;
+	}
+
+	public void setPrenomAr(String prenomAr) {
+		this.prenomAr = prenomAr;
+	}
+
+	public String getSom() {
+		return som;
+	}
+
+	public void setSom(String som) {
+		this.som = som;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getAddCasUrg() {
+		return addCasUrg;
+	}
+
+	public void setAddCasUrg(String addCasUrg) {
+		this.addCasUrg = addCasUrg;
+	}
+
+	public Date getDateRecrutement() {
+		return dateRecrutement;
+	}
+
+	public void setDateRecrutement(Date dateRecrutement) {
+		this.dateRecrutement = dateRecrutement;
+	}
+
+	public String getTelCasUrg() {
+		return telCasUrg;
+	}
+
+	public void setTelCasUrg(String telCasUrg) {
+		this.telCasUrg = telCasUrg;
+	}
+
+	public String getFonction() {
+		return fonction;
+	}
+
+	public void setFonction(String fonction) {
+		this.fonction = fonction;
+	}
+
+	public String getCodeAff() {
+		return codeAff;
+	}
+
+	public void setCodeAff(String codeAff) {
+		this.codeAff = codeAff;
+	}
+
+	public String getLieuxNaiss() {
+		return lieuxNaiss;
+	}
+
+	public void setLieuxNaiss(String lieuxNaiss) {
+		this.lieuxNaiss = lieuxNaiss;
+	}
+
+	public Date getDateNaiss() {
+		return dateNaiss;
+	}
+
+	public void setDateNaiss(Date dateNaiss) {
+		this.dateNaiss = dateNaiss;
+	}
+
+	public String getSituationAct() {
+		return situationAct;
+	}
+
+	public void setSituationAct(String situationAct) {
+		this.situationAct = situationAct;
+	}
+
+	public String getEtatCivil() {
+		return etatCivil;
+	}
+
+	public void setEtatCivil(String etatCivil) {
+		this.etatCivil = etatCivil;
+	}
+
+	public String getNationalite() {
+		return nationalite;
+	}
+
+	public void setNationalite(String nationalite) {
+		this.nationalite = nationalite;
+	}
+
+	public String getAffectation() {
+		return affectation;
+	}
+
+	public void setAffectation(String affectation) {
+		this.affectation = affectation;
+	}
+
+	public String getMp() {
+		return mp;
+	}
+
+	public void setMp(String mp) {
+		this.mp = mp;
+	}
+
+	public boolean isEtatReprise() {
+		return etatReprise;
+	}
+
+	public void setEtatReprise(boolean etatReprise) {
+		this.etatReprise = etatReprise;
+	}
+
+	public String getEmailProf() {
+		return emailProf;
+	}
+
+	public void setEmailProf(String emailProf) {
+		this.emailProf = emailProf;
+	}
+
+	public int getNbEnfants() {
+		return nbEnfants;
+	}
+
+	public void setNbEnfants(int nbEnfants) {
+		this.nbEnfants = nbEnfants;
+	}
+
 	public Prof() {
 		super();
 	}
 	public Prof(Grade grade, String cinProf, String nomProf, String prenomProf, String som, String adresse, String sex,
 			String addCasUrg, String telCasUrg, String fonction, String codeAff, String lieuxNaiss, Date dateNaiss,
 			String situationAct, String etatCivil, String nationalite, String affectation, String mp,
-			boolean etatReprise, String emailProf, int nbEnfants) {
+			boolean etatReprise, String emailProf, int nbEnfants,Date dateRecrutement,String nomAr,String prenomAr,String Cin) {
 		super();
 		this.grade = grade;
 		this.cinProf = cinProf;
@@ -273,12 +361,16 @@ public class Prof {
 		this.dateNaiss = dateNaiss;
 		this.situationAct = situationAct;
 		this.etatCivil = etatCivil;
+		this.nomAr=nomAr;
+		this.prenomAr=prenomAr;
 		this.nationalite = nationalite;
 		this.affectation = affectation;
 		this.mp = mp;
 		this.etatReprise = etatReprise;
 		this.emailProf = emailProf;
 		this.nbEnfants = nbEnfants;
+		this.dateRecrutement=dateRecrutement;
+		this.cinProf=Cin;
 	}
 	
 	
