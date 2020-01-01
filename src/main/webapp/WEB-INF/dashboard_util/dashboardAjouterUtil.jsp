@@ -27,37 +27,37 @@
                         <div class="form-row">
                         <div class="form-group">
                                 <label for="Nom">Nom :</label>
-                                <input type="text" name="Nom" id="Nom" required/>
+                                <input type="text" name="nomUt" id="Nom" required/>
                             </div>
                             <div class="form-group">
                                 <label for="Prénom">Prénom :</label>
-                                <input type="text" name="Prénom" id="Prénom" required/>
+                                <input type="text" name="prenomUt" id="Prénom" required/>
                             </div>
 
                         </div>
                         <div class="form-group">
                             <label for="codeAff">CIN :</label>
-                            <input type="text" name="codeAff" id="codeAff">
+                            <input type="text" name="cinUt" id="codeAff">
                         </div>
 
                         <div class="form-group">
                              <label for="tel">Tel :</label>
-                            <input type="text" name="tel" id="tel" required/>
+                            <input type="tel" name="telUt" id="tel" required/>
                         </div>
           
                         <div class="form-group">
                             <label for="email">Email :</label>
-                            <input type="email" name="email" id="email" />
+                            <input type="email" name="emailUt" id="email" />
                             
                         </div>
                         <div class="form-row">
                         <div class="form-group">
                                 <label for="date de naissance">Mot de passe :</label>
-                                <input type="text" name="date de naissance" id="date de naissance" required/>
+                                <input type="pasword" name="mpUt" id="date de naissance" required/>
                             </div>
                             <div class="form-group">
                                 <label for="Lieu">Confirmer Mot de passe  :</label>
-                                <input type="text" name="Lieu" id="Lieu" required/>
+                                <input type="password" name="Lieu" id="Lieu" required/>
                             </div>
                         </div>
 

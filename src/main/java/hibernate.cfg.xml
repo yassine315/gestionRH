@@ -58,7 +58,6 @@
       <mapping class="com.beans.grh.Conge" />
       <mapping class="com.beans.grh.Departement" />
       <mapping class="com.grh.beans.Diplome" />
-      <mapping class="com.grh.beans.DroitUt" />
       <mapping class="com.grh.beans.ElementModule" />
       <mapping class="com.grh.beans.Enseigner" />
       <mapping class="com.beans.grh.Mission" />
@@ -68,6 +67,7 @@
       <mapping class="com.grh.beans.Grade" />
       <mapping class="com.grh.beans.Prof" />
       <mapping class="com.grh.beans.Utilisateur" />
+      <mapping class="com.grh.beans.DroitUt" />
       
       <!-- 
       <mapping class="com.beans.QuitterTerrit" />

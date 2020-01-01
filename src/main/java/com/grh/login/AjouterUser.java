@@ -25,7 +25,6 @@ public class AjouterUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	SessionFactory sessionFactory;
-	List<com.grh.beans.DroitUt> droits;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -52,23 +51,9 @@ public class AjouterUser extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Session session = sessionFactory.openSession();
-		session.beginTransaction();
 		
-		//la creation de l'objet criteria
-		CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-		CriteriaQuery<com.grh.beans.DroitUt> criteriaQuery = criteriaBuilder.createQuery(com.grh.beans.DroitUt.class);
 		
-		Root<com.grh.beans.DroitUt> root = criteriaQuery.from(com.grh.beans.DroitUt.class);
-		criteriaQuery.multiselect(root);
-		
-		Query<com.grh.beans.DroitUt> query = session.createQuery(criteriaQuery);
-		List<com.grh.beans.DroitUt> droits = query.list();
-		session.getTransaction().commit();
-		session.close();
-		
-		request.setAttribute("droits", droits);
-		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboardProf/dashboardAjouterUtil.jsp").forward(request, response);
+		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboard_util/dashboardAjouterUtil.jsp").forward(request, response);
 	}
 
 	/**
@@ -91,13 +76,10 @@ public class AjouterUser extends HttpServlet {
 		session.save(user);
 		session.getTransaction().commit();
 		session.close();
+		request.getServletContext().getRequestDispatcher("/Utilisateur").forward(request, response);
+
 	}
 
-	public AjouterUser(SessionFactory sessionFactory, List<DroitUt> droits) {
-		super();
-		this.sessionFactory = sessionFactory;
 	
-		this.droits = droits;
-	}
 
 }

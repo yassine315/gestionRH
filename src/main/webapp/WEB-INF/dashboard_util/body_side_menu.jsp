@@ -11,7 +11,7 @@
                 <ul class="list-unstyled components">
                     <p>Gestion des utilisateurs</p>
                     <li>
-                        <a href="/gestionRH/AjouterUtil">Ajouter un utilisateur</a>
+                        <a href="/gestionRH/AjouterUser">Ajouter un utilisateur</a>
                     </li>
                     <!-- 
                     <li class="active">
@@ -35,7 +35,7 @@
                     </li>
                      -->
                     <li>
-                        <a href="#">Consulter les utilisateurs</a>
+                        <a href="/gestionRH/Utilisateur">Consulter les utilisateurs</a>
                     </li>
                     <li>
                         <a href="#">Profile</a>
