@@ -51,6 +51,13 @@
   	<servlet-name>FiliereS</servlet-name>
   	<servlet-class>com.grh.filiere.FiliereS</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>AjouterModule</display-name>
+  	<servlet-name>AjouterModule</servlet-name>
+  	<servlet-class>com.grh.filiere.AjouterModule</servlet-class>
+  </servlet>
   
  
   
@@ -100,5 +107,4 @@
   	<servlet-name>FiliereS</servlet-name>
   	<url-pattern>/FiliereS</url-pattern>
   </servlet-mapping>
-  
 </web-app>

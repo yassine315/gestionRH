@@ -18,15 +18,12 @@
                 
                         </ul>
                     </li>
-                    <!-- 
+                   
                     <li class="active">
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Documents</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Modules</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="/gestionRH/Attestation">Attestations</a></li>
-                            <li><a href="/gestionRH/Demmande">Demandes</a></li>
-                            <li><a href="/gestionRH/Recu">Reçus</a></li>
-                            <li><a href="#">Reprises de travail</a></li>
-                            <li><a href="#">Justificatifs</a></li>
+                            <li><a href="/gestionRH/AjouterModule">Ajouter</a></li>
+                            <li><a href="/gestionRH/Demmande">Consulter</a></li>
                         </ul>
                     </li>
                     
