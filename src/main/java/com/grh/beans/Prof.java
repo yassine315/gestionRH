@@ -4,6 +4,8 @@
  * Purpose: Defines the Class Prof
  ***********************************************************************/
 package com.grh.beans;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import javax.persistence.Column;
@@ -89,6 +91,12 @@ public class Prof {
    
   @Column(name="NB_ENFANTS")
 	private int nbEnfants;
+  
+  @Column(name="NOM_ARABE")
+	private byte[] nomArabe;
+  
+  @Column(name="PRENOM_ARABE")
+	private byte[] prenomArabe;
    
    /*
 	private List<Conge> conge;
@@ -228,6 +236,29 @@ public class Prof {
 	}
 	
 	
+	
+	
+	public Grade getGrade() {
+		return grade;
+	}
+	public void setGrade(Grade grade) {
+		this.grade = grade;
+	}
+	
+	
+	public byte[] getNomArabe() {
+
+		return nomArabe;
+	}
+	public void setNomArabe(byte[] nomArabe) {
+		this.nomArabe = nomArabe;
+	}
+	public byte[] getPrenomArabe() {
+		return prenomArabe;
+	}
+	public void setPrenomArabe(byte[] prenomArabe) {
+		this.prenomArabe = prenomArabe;
+	}
 	public Prof( String nomProf, String prenomProf, String som, String adresse, String sex,
 			String telCasUrg,  String codeAff, String lieuxNaiss, Date dateNaiss,
 			 String etatCivil, String nationalite, String affectation,

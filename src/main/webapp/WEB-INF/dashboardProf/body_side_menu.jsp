@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
         <div class="wrapper">
             <!-- Sidebar Holder -->
@@ -24,7 +24,7 @@
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li><a href="/gestionRH/Attestation">Attestations</a></li>
                             <li><a href="/gestionRH/Demmande">Demandes</a></li>
-                            <li><a href="/gestionRH/Recu">Reçus</a></li>
+                            <li><a href="/gestionRH/Recu">ReÃ§us</a></li>
                             <li><a href="/gestionRH/autre/reprise_travail.jsp">Reprises de travail</a></li>
                             <li><a href="#">Justificatifs</a></li>
                         </ul>
@@ -47,7 +47,7 @@
 
                 <ul class="list-unstyled CTAs">
                     <!-- <li><a href="#" class="download">button</a></li> -->
-                    <li><a href="/gestionRH/" class="article">Déconnecter</a></li>
+                    <li><a href="/gestionRH/" class="article">DÃ©connecter</a></li>
                 </ul>
             </nav>
 

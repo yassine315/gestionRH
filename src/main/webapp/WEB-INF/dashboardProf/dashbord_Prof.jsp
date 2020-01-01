@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@page import="com.grh.beans.Prof,java.util.List"  %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="com.grh.beans.Prof,java.util.List,java.nio.charset.StandardCharsets
+    "  %>
     
     
     <% List<Prof> profs = (List)request.getAttribute("profs"); %>
@@ -41,7 +42,7 @@
                      <th>Email</th>
                      <th>Contact</th>
                       <th>Edit</th>
-                      
+                      <th>Nom Arabe</th>
                        <th>Generer</th>
                    </thead>
     <tbody>
@@ -54,8 +55,10 @@
     <td><%= prof.getAdresse() %></td>
     <td><%= prof.getEmailProf() %></td>
     <td><%= prof.getTelCasUrg() %></td>
+    <td><%= new String(prof.getNomArabe(), StandardCharsets.UTF_8)+" "+new String(prof.getPrenomArabe(), StandardCharsets.UTF_8) %></td>
     <td><p data-placement="top" data-toggle="tooltip"  title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="generer" ><button class="generer btn btn-danger btn-xs" data-title="generer" data-id="<%= prof.getSom() %>" data-toggle="modal" data-target="#generer" ><span class="glyphicon glyphicon-file"></span></button></p></td>
+    <td><p data-placement="top" data-toggle="tooltip" title="generer" ><button c
+    lass="generer btn btn-danger btn-xs" data-title="generer" data-id="<%= prof.getSom() %>" data-toggle="modal" data-target="#generer" ><span class="glyphicon glyphicon-file"></span></button></p></td>
  </tr>
  <%} %>
     </tbody>
@@ -76,7 +79,7 @@
     <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        <h4 class="modal-title custom_align" id="Heading">Génerer attestation</h4>
+        <h4 class="modal-title custom_align" id="Heading">GÃ©nerer attestation</h4>
       </div>
         
       
@@ -90,7 +93,7 @@
            	<span class="btn-label">
            		<i class="glyphicon glyphicon-chevron-right"></i>
            	</span>
-           		<a class="url-target" href="/gestionRH/Generer?type=attestation&name=attestation_conge.jsp&som=">Attestation congé </a>
+           		<a class="url-target" href="/gestionRH/Generer?type=attestation&name=attestation_conge.jsp&som=">Attestation congÃ© </a>
            </label>
           
            <label class="element-animation2 btn btn-lg btn-primary btn-block">
@@ -109,7 +112,7 @@
            	
            	
            <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
-           		<a class="url-target" href="/gestionRH/Generer?type=attestation&name=quitte_territoire.jsp&som=">Quitter térritoire</a>
+           		<a class="url-target" href="/gestionRH/Generer?type=attestation&name=quitte_territoire.jsp&som=">Quitter tÃ©rritoire</a>
            </label>
            
            <label class="element-animation1 btn btn-lg btn-primary btn-block">
@@ -130,20 +133,20 @@
            	<span class="btn-label">
            		<i class="glyphicon glyphicon-chevron-right"></i>
            	</span>
-           <a class="url-target" href="/gestionRH/Generer?type=demande&name=demande_quitter.jsp&som=">Demande Attestation de Quitte de Téritoire</a>
+           <a class="url-target" href="/gestionRH/Generer?type=demande&name=demande_quitter.jsp&som=">Demande Attestation de Quitte de TÃ©ritoire</a>
            	</label>
            	<label class="element-animation1 btn btn-lg btn-primary btn-block">
            	<span class="btn-label">
            		<i class="glyphicon glyphicon-chevron-right"></i>
            	</span>
-           <a class="url-target" href="/gestionRH/Generer?type=recu&name=recu_medical.html&som=">Reçu Medical</a>
+           <a class="url-target" href="/gestionRH/Generer?type=recu&name=recu_medical.html&som=">ReÃ§u Medical</a>
            	</label>
            	
            	<label class="element-animation1 btn btn-lg btn-primary btn-block">
            	<span class="btn-label">
            		<i class="glyphicon glyphicon-chevron-right"></i>
            	</span>
-           <a class="url-target" href="/gestionRH/Generer?type=recu&name=recu_document.html&som=">Reçu Document</a>
+           <a class="url-target" href="/gestionRH/Generer?type=recu&name=recu_document.html&som=">ReÃ§u Document</a>
            	</label>
        </div>
    </div>
@@ -184,7 +187,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label" name="nom"> Prénom</label>
+                    <label for="firstName" class="col-sm-3 control-label" name="nom"> PrÃ©nom</label>
                     <div class="col-sm-9">
                         <input type="text" id="firstName" placeholder="prenom" class="form-control" autofocus>
                     </div>
@@ -219,16 +222,16 @@
                     <label for="country" class="col-sm-3 control-label">Etat Civile</label>
                     <div class="col-sm-9">
                         <select id="country" class="form-control">
-                            <option>Marié</option>
-                            <option>Célibataire</option>
-                            <option>Divorvé</option>
+                            <option>MariÃ©</option>
+                            <option>CÃ©libataire</option>
+                            <option>DivorvÃ©</option>
                             
                         </select>
                     </div>
                 </div> 
 
         <div class="modal-footer ">
-        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Modifier</button>
+        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>Â Modifier</button>
         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Anuller</button>
       </div>
       </form> 

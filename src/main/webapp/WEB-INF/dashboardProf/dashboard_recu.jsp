@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 </html>
@@ -16,24 +16,26 @@
   <div class="contenir" >
     <div class="row">
       <!-- Free Tier -->
+      <a href="./grh_recu/recu_document.html">
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
-            <h6 class="card-price text-center">Reçu Depot document</h6>
-            
-            
+            <h6 class="card-price text-center">ReÃ§u Depot document</h6>
           </div>
         </div>
       </div>
+      </a>
       <!-- Plus Tier -->
+      <a href="./grh_recu/recu_medical.html">
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
-           <h6 class="card-price text-center">Reçu d'attestation medical </h6>
+           <h6 class="card-price text-center">ReÃ§u d'attestation medical </h6>
             
         </div>
       </div>
       </div>
+      </a>
       <!-- Pro Tier 
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
