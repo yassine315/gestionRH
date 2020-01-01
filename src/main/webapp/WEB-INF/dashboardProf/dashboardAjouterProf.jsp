@@ -27,18 +27,31 @@
                 <div class="signup-form">
                     <form action="/gestionRH/AjouterProf" method="POST"  id="register-form">
                         <h2>Ajouter un Professeur</h2>
+                        
                             <div class="form-group">       
                             <label for="id"> SOM :</label>
                             <input type="text" name="som" id="id" required/>
+                            <div class="form-group">
+                                <label for="date de naissance">CIN :</label>
+                                <input type="text" name="cin" id="date de naissance" required/>
+                            </div>
                         </div>
                         <div class="form-row">
                         <div class="form-group">
                                 <label for="Nom">Nom :</label>
                                 <input type="text" name="nom" id="Nom" required/>
                             </div>
+                             <div class="form-group">
+                                <label for="Prénom">Nom Ar :</label>
+                                <input type="text" name="nomAr" id="Prénom" required/>
+                            </div>
                             <div class="form-group">
                                 <label for="PrÃ©nom">PrÃ©nom :</label>
                                 <input type="text" name="prenom" id="PrÃ©nom" required/>
+                            </div>
+                             <div class="form-group">
+                                <label for="Prénom">Prénom Ar :</label>
+                                <input type="text" name="prenomAr" id="Prénom" required/>
                             </div>
                         </div>
                          <div class="form-row">
@@ -91,7 +104,10 @@
                               <input type="number" name="nbrEnfant" id="nbrEnfant" required/>
                             </div>
                         
-                  
+                 		 <div class="form-group">
+                                <label for="date de naissance">Date de Recrutement :</label>
+                                <input type="date" name="recrutement" id="date de naissance" required/>
+                            </div>
                         <div class="form-group">
                             <label for="Affectation">Affectation :</label>
                             <input type="text" name="affectation" id="Affectation">

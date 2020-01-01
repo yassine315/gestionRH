@@ -1,6 +1,7 @@
 package com.grh.login;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -111,10 +112,23 @@ public class AjouterProf extends HttpServlet {
 		String email = request.getParameter("email");
 		int idGrade = Integer.parseInt(request.getParameter("grade"));
 		com.grh.beans.Grade grade = grades.get(idGrade);
+		String nomAr = request.getParameter("nomAr");
+		String prenomAr = request.getParameter("prenomAr");
+		SimpleDateFormat rec = new SimpleDateFormat("yyyy-MM-dd");
+		Date recrutement = new Date();
+		String cin = request.getParameter("cin");
+		System.out.println(nomAr+prenomAr);
+		try {
+			recrutement = rec.parse(request.getParameter("recrutement"));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		com.grh.beans.Prof prof = new com.grh.beans.Prof( grade, "jy", nom, prenom, som, adress, genre, "addcasurg", contact, "fonction", codeAff, lieu,
 				naissance, "cele", etatCivil, nationalite, affectation, "mp",
-				true, email, nbrEnfant);
+				true, email, nbrEnfant,recrutement,nomAr,prenomAr,cin);
 		
 		session.save(prof);
 		session.getTransaction().commit();

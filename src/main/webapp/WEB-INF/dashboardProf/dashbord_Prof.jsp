@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@page import="com.grh.beans.Prof,java.util.List,java.nio.charset.StandardCharsets
     "  %>
+=======
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@page import="com.grh.beans.Prof,java.util.List,java.text.SimpleDateFormat"  %>
+>>>>>>> 4e684ef9387dcfce9bf2fa0543ffa7c24b2fcaf4
     
     
     <% List<Prof> profs = (List)request.getAttribute("profs"); %>
@@ -36,26 +42,30 @@
                    
                    <!-- <th><input type="checkbox" id="checkall" /></th>-->
                    <th>SOM</th>
-                   <th>First Name</th>
-                    <th>Last Name</th>
-                     <th>Address</th>
-                     <th>Email</th>
-                     <th>Contact</th>
-                      <th>Edit</th>
-                      <th>Nom Arabe</th>
-                       <th>Generer</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Nom Ar</th>
+                   	<th>Prenom Ar</th>
+                     <th>Grade</th>                   
+                     <th>Date de Recrutement</th> 
+                     <th>Email</th>                
+                     <th>CIN</th>
+                     <th>Modifier</th>
+                     <th>Génerer</th>
                    </thead>
     <tbody>
     <%for(Prof prof : profs){ %>
  <tr>
     <!-- <td><input type="checkbox" class="checkthis" /></td>-->
     <td><%= prof.getSom() %></td>
-    <td><%= prof.getPrenomProf() %></td>
     <td><%= prof.getNomProf() %></td>
-    <td><%= prof.getAdresse() %></td>
+    <td><%= prof.getPrenomProf() %></td>
+    <td><%= prof.getNomAr() %></td>
+    <td><%= prof.getPrenomAr() %></td>
+    <td><%= prof.getGrade().getCadreGrade()%></td>
+    <td><%= new SimpleDateFormat("dd/MM/yyyy").format(prof.getDateRecrutement()) %></td>
     <td><%= prof.getEmailProf() %></td>
-    <td><%= prof.getTelCasUrg() %></td>
-    <td><%= new String(prof.getNomArabe(), StandardCharsets.UTF_8)+" "+new String(prof.getPrenomArabe(), StandardCharsets.UTF_8) %></td>
+    <td><%= prof.getCinProf() %></td>
     <td><p data-placement="top" data-toggle="tooltip"  title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
     <td><p data-placement="top" data-toggle="tooltip" title="generer" ><button c
     lass="generer btn btn-danger btn-xs" data-title="generer" data-id="<%= prof.getSom() %>" data-toggle="modal" data-target="#generer" ><span class="glyphicon glyphicon-file"></span></button></p></td>
