@@ -11,7 +11,7 @@
                 <ul class="list-unstyled components">
                     <p>Gestion des utilisateurs</p>
                     <li>
-                        <a href="#homeSubmenu">Ajouter un utilisateur</a>
+                        <a href="/gestionRH/AjouterUtil">Ajouter un utilisateur</a>
                     </li>
                     <!-- 
                     <li class="active">

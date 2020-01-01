@@ -24,10 +24,6 @@
                 <div class="signup-form">
                     <form method="POST"  id="register-form">
                         <h2>Ajouter un utilisateur</h2>
-                            <div class="form-group">       
-                            <label for="id"> Login:</label>
-                            <input type="text" name="id" id="id" required/>
-                        </div>
                         <div class="form-row">
                         <div class="form-group">
                                 <label for="Nom">Nom :</label>
@@ -43,32 +39,12 @@
                             <label for="codeAff">CIN :</label>
                             <input type="text" name="codeAff" id="codeAff">
                         </div>
-                         <div class="form-row">
-                        <div class="form-group">
-                                <label for="date de naissance">Date de naissance :</label>
-                                <input type="text" name="date de naissance" id="date de naissance" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="Lieu">Lieu :</label>
-                                <input type="text" name="Lieu" id="Lieu" required/>
-                            </div>
-                        </div>
 
                         <div class="form-group">
-                            <label for="adresse">Adresse :</label>
-                            <input type="text" name="adresse" id="adresse" required/>
                              <label for="tel">Tel :</label>
                             <input type="text" name="tel" id="tel" required/>
-                             <label for="Contact">Profil :</label>
-                            <input type="text" name="Contact" id="Contact" required/>
                         </div>
-                        
-                            
-                        
-                  
-                        
-                        
-                        
+          
                         <div class="form-group">
                             <label for="email">Email :</label>
                             <input type="email" name="email" id="email" />
@@ -85,12 +61,6 @@
                             </div>
                         </div>
 
-                         <div class="form-group">
-                            
-                            <label for="Photo">Photo :</label>
-                            <input type="file"  accept="image/gif,image/jpg, image/jpeg, image/png" required name='img'/>
-                        </div>
-
                         <div class="form-submit">
                             <input type="submit" value="Annuler" class="submit" name="reset" id="reset" />
                             <input type="submit" value="Ajouter" class="submit" name="submit" id="submit" />
@@ -105,7 +75,7 @@
     </div>
 
     <!-- JS -->
-    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script >(function($) {
 
   $('#reset').on('click', function(){

@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"","author":"Mounia El Koraichi","fileName":"quite_de_territoire.pdf","bounds":[[909,1286]],"bookmarks":[],"thumbnailType":"jpg","pageType":"html","pageLabels":[]};

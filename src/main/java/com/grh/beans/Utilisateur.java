@@ -4,47 +4,48 @@
  * Purpose: Defines the Class Utilisateur
  ***********************************************************************/
 package com.grh.beans;
-import java.util.*;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="utilisateur")
-
 public class Utilisateur {
   
+	public Utilisateur(String cinUt, String nomUt, String prenomUt, String emailUt, String mpUt, String telUt) {
+		super();
+		this.cinUt = cinUt;
+		this.nomUt = nomUt;
+		this.prenomUt = prenomUt;
+		this.emailUt = emailUt;
+		this.mpUt = mpUt;
+		this.telUt = telUt;
+	}
 	@Id
-	@GeneratedValue
-	
-	private int idUt;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID_UT")
-	
-	private String cinUt;
+	private int idUt;
 	@Column(name="CIN_UT")
-	
-	private String nomUt;
+	private String cinUt;
+
 	@Column(name="NOM_UT")
+	private String nomUt;
 	
-	private String prenomUt;
 	@Column(name="PRENOM_UT")
+	private String prenomUt;
 	
-	private String emailUt;
 	@Column(name="EMAIL_UT")
+	private String emailUt;
 	
-	private String mpUt;
 	@Column(name="MP_UT")
+	private String mpUt;
 	
-	private String telUt;
 	@Column(name="TEL_UT")
-	
-	private List<Utilisateur> utilisateurB;
-	private List<Utilisateur> utilisateurA;
-	private List<DroitUt> droitUt;
-	private List<Filiere> filiere;
+	private String telUt;
+
 	public int getIdUt() {
 		return idUt;
 	}
@@ -87,31 +88,24 @@ public class Utilisateur {
 	public void setTelUt(String telUt) {
 		this.telUt = telUt;
 	}
-	public List<Utilisateur> getUtilisateurB() {
-		return utilisateurB;
+
+
+	public Utilisateur() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	public void setUtilisateurB(List<Utilisateur> utilisateurB) {
-		this.utilisateurB = utilisateurB;
+	public Utilisateur(int idUt, String cinUt, String nomUt, String prenomUt, String emailUt, String mpUt, String telUt) {
+		super();
+		this.idUt = idUt;
+		this.cinUt = cinUt;
+		this.nomUt = nomUt;
+		this.prenomUt = prenomUt;
+		this.emailUt = emailUt;
+		this.mpUt = mpUt;
+		this.telUt = telUt;
+	
 	}
-	public List<Utilisateur> getUtilisateurA() {
-		return utilisateurA;
-	}
-	public void setUtilisateurA(List<Utilisateur> utilisateurA) {
-		this.utilisateurA = utilisateurA;
-	}
-	public List<DroitUt> getDroitUt() {
-		return droitUt;
-	}
-	public void setDroitUt(List<DroitUt> droitUt) {
-		this.droitUt = droitUt;
-	}
-	public List<Filiere> getFiliere() {
-		return filiere;
-	}
-	public void setFiliere(List<Filiere> filiere) {
-		this.filiere = filiere;
-	}
-   
+ 
 	
    
    

@@ -46,17 +46,11 @@
   	<servlet-name>Grade</servlet-name>
   	<servlet-class>com.grh.login.Grade</servlet-class>
   </servlet>
+
   
   <servlet>
   	<servlet-name>FiliereS</servlet-name>
   	<servlet-class>com.grh.filiere.FiliereS</servlet-class>
-  </servlet>
-  <servlet>
-  	<description>
-  	</description>
-  	<display-name>AjouterModule</display-name>
-  	<servlet-name>AjouterModule</servlet-name>
-  	<servlet-class>com.grh.filiere.AjouterModule</servlet-class>
   </servlet>
   
  
@@ -102,9 +96,9 @@
   	<servlet-name>Grade</servlet-name>
   	<url-pattern>/Grade</url-pattern>
   </servlet-mapping>
- 
   <servlet-mapping>
   	<servlet-name>FiliereS</servlet-name>
   	<url-pattern>/FiliereS</url-pattern>
   </servlet-mapping>
+
 </web-app>

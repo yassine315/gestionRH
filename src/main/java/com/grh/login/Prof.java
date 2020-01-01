@@ -35,7 +35,7 @@ public class Prof extends HttpServlet {
 	SessionFactory sessionFactory ;
    
 	public Prof() {
-		sessionFactory = HibernateUtil.getSessionFactory();
+		
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Prof extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		
+		sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
 		

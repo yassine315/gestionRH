@@ -77,6 +77,7 @@
 
 
 <div class="modal fade" id="generer"  role="dialog" aria-labelledby="edit" aria-hidden="true">
+
       <div class="modal-dialog">
     <div class="modal-content">
           <div class="modal-header">
@@ -185,7 +186,6 @@
                         <input type="text" id="firstName" placeholder="Nom" class="form-control" autofocus>
                        
                     </div>
-                    
                 </div>
                 
                 <div class="form-group">
@@ -199,12 +199,14 @@
                     <div class="col-sm-9">
                         <input type="number" id="firstName" placeholder="Som" class="form-control" autofocus>
                     </div>
+
                     </div>
                      <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label" name="grade"> Grade</label>
                     <div class="col-sm-9">
                         <input type="text" id="firstName" placeholder="grade" class="form-control" autofocus>
                     </div>
+
                     </div>
                      <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label" name="dateRecrutement"> Date de Recrutement</label>
@@ -237,7 +239,6 @@
         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Anuller</button>
       </div>
       </form> 
-      
         </div>
         </div>
         </div>
@@ -252,6 +253,11 @@
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
+
+<!--  script pour boit e dialogue -->
+
+
+</script>
   <script type="text/javascript"> 
 
   function replaceUrlParam(url, paramName, paramValue)
@@ -275,10 +281,6 @@
 	         	});
 	     
 	});
-</script>
-<!--  script pour boit e dialogue -->
-
-
 </script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@page import="com.grh.beans.Grade,java.util.List" %>
@@ -46,11 +45,11 @@
                                 <input type="text" name="nomAr" id="Prenom" required/>
                             </div>
                             <div class="form-group">
-                                <label for="Prenom">Prénom :</label>
+                                <label for="Prenom">PrÃ©nom :</label>
                                 <input type="text" name="prenom" id="Prenom" required/>
                             </div>
                              <div class="form-group">
-                                <label for="Prenom">Prénom Ar :</label>
+                                <label for="Prenom">PrÃ©nom Ar :</label>
                                 <input type="text" name="prenomAr" id="Prenom" required/>
                             </div>
                         </div>
@@ -94,8 +93,8 @@
                             </div>
                             </div>
                             <div class="form-group">
-                                <label for="nationalité">Nationalité :</label>
-                                <input type="text" name="nationalite" id="nationalité" required/>
+                                <label for="nationalitÃ©">NationalitÃ© :</label>
+                                <input type="text" name="nationalite" id="nationalitÃ©" required/>
                             <label for="etat civil">Etat civil :</label>
                             <input type="text" name="etatCivil" id="etat civil" required/>
                               <label for="fonction">Fonction :</label>

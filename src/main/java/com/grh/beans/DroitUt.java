@@ -4,8 +4,6 @@
  * Purpose: Defines the Class DroitUt
  ***********************************************************************/
 package com.grh.beans ;
-import java.util.*;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,14 +14,23 @@ import javax.persistence.Table;
 @Table(name="droit_ut")
 
 public class DroitUt {
-   @Id
+   public DroitUt(int idDroit, String nomDroit) {
+		super();
+		this.idDroit = idDroit;
+		this.nomDroit = nomDroit;
+	}
+public DroitUt() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+@Id
    @GeneratedValue
-   
-	private int idDroit;
    @Column(name="ID_DROIT")
-   
+	private int idDroit;
+
+@Column(name="NOM_DROIT")
    private String nomDroit;
-   @Column(name="NOM_DROIT")
+  
    
 public int getIdDroit() {
 	return idDroit;

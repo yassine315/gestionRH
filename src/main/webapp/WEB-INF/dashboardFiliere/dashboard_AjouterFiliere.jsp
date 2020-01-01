@@ -12,14 +12,21 @@
     <link rel="stylesheet" href="./fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="./css/AjouterProf.css">
+    <link rel="stylesheet" href="./css/ajouter_filiere.css">
+    <title>Ajouter une filière</title>
 
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="./fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./css/ajouter_filiere.css">
 </head>
 <body>
 <%@include file="body_side_menu.jsp" %>
 
 <%--mettez le centenu ici --%>
 
+<<<<<<< HEAD
  <div >
         <div class="container-fluid" >
             <div class="signup-content">
@@ -41,6 +48,7 @@
                           <option value="Master  de recherche">Master  de recherche</option>
                           <option value="Cycle ingénieur">Cycle ingénieur</option>
                           <option value="années préparatoires">Années préparatoires</option>
+
                           <option value="Doctorat">Doctorat</option>
                           <option value="autre">autre</option>
                         </select>
@@ -60,6 +68,7 @@
                                 <label for="date de création">date de création:</label>
                                 <input type="date" name="creatDate">
                             </div>
+
                         <div class="form-submit">
                             <input type="submit" value="Annuler" class="submit" name="reset" id="reset" />
                             <input type="submit" value="Ajouter" class="submit" name="submit" id="submit" />
@@ -70,9 +79,10 @@
         </div>
 
     </div>
+    <%@include file="footer_side_menu.jsp" %>
 
     <!-- JS -->
-    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
     <script >(function($) {
 
   $('#reset').on('click', function(){

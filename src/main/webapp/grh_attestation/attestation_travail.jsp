@@ -115,7 +115,8 @@ function lI1IllI111IlI1I1llll1lIIl()
 <P class="p0 ft0">ATTESTATION DE TRAVAIL</P>
 <P class="p1 ft1">Le directeur de l’Ecole Nationale Supérieure d’Arts et Métiers de Casablanca, soussigné, atteste que :</P>
 <P class="p2 ft1">Mr (Mme) :<%= prof.getNomProf()+" "+prof.getPrenomProf()   %></P>
-<P class="p2 ft1">Né (e) le :<%= prof.getDateNaiss().getDay() +"-"+prof.getDateNaiss().getMonth()+"-"+prof.getDateNaiss().getYear() %></P>
+<% int year=prof.getDateNaiss().getYear()+1900; %>
+<P class="p2 ft1">Né (e) le :<%= prof.getDateNaiss().getDay() +"/"+prof.getDateNaiss().getMonth()+"/"+year %></P>
 <P class="p3 ft1">Fonction :<%= prof.getFonction() %></P>
 <P class="p3 ft1">S. O. M. : <%= prof.getSom() %></P>
 <P class="p4 ft1">est en fonction à l’ENSAM Casablanca depuis le</P>

@@ -9,7 +9,7 @@
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>Administrer les professeurs</p>
+                    <p>Administrer les Filieres</p>
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Filieres</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -19,6 +19,8 @@
                         </ul>
                     </li>
                    
+                    <!-- 
+>>>>>>> 4e7f2a1938d7e5774e0ae6799e715978f39371b2
                     <li class="active">
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Modules</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
@@ -36,7 +38,7 @@
                         </ul>
                     </li>
                      -->
-                    
+
                   
                 </ul>
 

@@ -335,6 +335,35 @@ public class Prof {
 	public void setNbEnfants(int nbEnfants) {
 		this.nbEnfants = nbEnfants;
 	}
+	public Prof(String cinProf, String nomProf, String prenomProf, String som, String adresse, String sex,
+			String addCasUrg, String telCasUrg, String fonction, String codeAff, String lieuxNaiss, Date dateNaiss,
+			String situationAct, String etatCivil, String nationalite, String affectation, String mp,
+			boolean etatReprise, String emailProf, int nbEnfants) {
+		super();
+		this.cinProf = cinProf;
+		this.nomProf = nomProf;
+		this.prenomProf = prenomProf;
+		this.som = som;
+		this.adresse = adresse;
+		this.sex = sex;
+		this.addCasUrg = addCasUrg;
+		this.telCasUrg = telCasUrg;
+		this.fonction = fonction;
+		this.codeAff = codeAff;
+		this.lieuxNaiss = lieuxNaiss;
+		this.dateNaiss = dateNaiss;
+		this.situationAct = situationAct;
+		this.etatCivil = etatCivil;
+		this.nationalite = nationalite;
+		this.affectation = affectation;
+		this.mp = mp;
+		this.etatReprise = etatReprise;
+		this.emailProf = emailProf;
+		this.nbEnfants = nbEnfants;
+	}
+	public Prof() {
+		super();
+	}
 	
 	
 	
@@ -369,9 +398,7 @@ public class Prof {
 		this.nbEnfants = nbEnfants;
 		this.grade = grade;
 	}
-	public Prof() {
-		super();
-	}
+	
 	public Prof(Grade grade, String cinProf, String nomProf, String prenomProf, String som, String adresse, String sex,
 			String addCasUrg, String telCasUrg, String fonction, String codeAff, String lieuxNaiss, Date dateNaiss,
 			String situationAct, String etatCivil, String nationalite, String affectation, String mp,

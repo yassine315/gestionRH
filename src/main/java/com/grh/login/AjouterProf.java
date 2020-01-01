@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -25,6 +26,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
 import com.grh.beans.Grade;
+
 import com.grh.util.HibernateUtil;
 
 /**
@@ -35,6 +37,7 @@ public class AjouterProf extends HttpServlet {
        
 	SessionFactory sessionFactory;
 	Map<Integer,com.grh.beans.Grade> grades;
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -67,6 +70,7 @@ public class AjouterProf extends HttpServlet {
 		session.close();
 		
 		request.setAttribute("grades", gradesList);
+
 		request.getServletContext().getRequestDispatcher("/WEB-INF/dashboardProf/dashboardAjouterProf.jsp").forward(request, response);
 	}
 
@@ -87,6 +91,7 @@ public class AjouterProf extends HttpServlet {
 				Query<com.grh.beans.Grade> query = session.createQuery(criteriaQuery);
 				grades = query.list().stream().collect(Collectors.toMap(com.grh.beans.Grade::getIdGrade, e -> e));
 				
+
 		
 		String som = request.getParameter("som");
 		String nom = request.getParameter("nom");
@@ -100,6 +105,7 @@ public class AjouterProf extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		String lieu = request.getParameter("lieu");
 		String adress = request.getParameter("adress");
 		String contact = request.getParameter("contact");
