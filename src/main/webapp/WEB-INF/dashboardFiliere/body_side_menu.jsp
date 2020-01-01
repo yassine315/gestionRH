@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
         <div class="wrapper">
             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3><a href=""/gestionRH/Prof">ENSAM admin</a></h3>
+                    <h3><a href="/gestionRH/Login">ENSAM admin</a></h3>
                 </div>
 
                 <ul class="list-unstyled components">
@@ -14,7 +14,7 @@
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Filieres</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li><a href="/gestionRH/AjouterFiliere">Ajouter</a></li>
-                            <li><a href="/gestionRH/Prof">Consulter</a></li>
+                            <li><a href="/gestionRH/FiliereS">Consulter</a></li>
                 
                         </ul>
                     </li>
@@ -24,7 +24,7 @@
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li><a href="/gestionRH/Attestation">Attestations</a></li>
                             <li><a href="/gestionRH/Demmande">Demandes</a></li>
-                            <li><a href="/gestionRH/Recu">Reçus</a></li>
+                            <li><a href="/gestionRH/Recu">ReÃ§us</a></li>
                             <li><a href="#">Reprises de travail</a></li>
                             <li><a href="#">Justificatifs</a></li>
                         </ul>
@@ -39,12 +39,8 @@
                         </ul>
                     </li>
                      -->
-                    <li>
-                        <a href="#">Reprise travail</a>
-                    </li>
-                    <li>
-                        <a href="#">Grade</a>
-                    </li>
+                    
+                  
                 </ul>
 
                 <ul class="list-unstyled CTAs">

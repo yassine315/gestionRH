@@ -1,11 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="com.grh.beans.Prof,java.util.List"  %>
+        <% List<Prof> profs = (List)request.getAttribute("profs"); %>
+    
 <!DOCTYPE html>
 <html>
 <head>
 <%@include file="head_side_menu.jsp" %>
 
-	<title>Insert title here</title>
 	<!-- Font Icon -->
     <link rel="stylesheet" href="./fonts/material-icon/css/material-design-iconic-font.min.css">
 
@@ -18,87 +20,46 @@
 
 <%--mettez le centenu ici --%>
 
-
-
-    <div class="container-fluid" >
+ <div >
         <div class="container-fluid" >
             <div class="signup-content">
                 <div class="signup-form">
-                    <form method="POST"  id="register-form">
-                        <h2>Ajouter un Professeur</h2>
-                            <div class="form-group">       
-                            <label for="id"> SOM :</label>
-                            <input type="text" name="id" id="id" required/>
+                    <form action="/gestionRH/AjouterFiliere" method="POST" class="register-form" id="register-form">
+                        <h2>Ajouter une fili√®re</h2>
+                        <div class="form-group">       
+                            <label for="id"> Nom de fili√®re :</label>
+                            <input type="text" name="nomFiliere" id="id" required/>
                         </div>
-                        <div class="form-row">
-                        <div class="form-group">
-                                <label for="Nom">Nom :</label>
-                                <input type="text" name="Nom" id="Nom" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="PrÈnom">PrÈnom :</label>
-                                <input type="text" name="PrÈnom" id="PrÈnom" required/>
-                            </div>
-                        </div>
-                         <div class="form-row">
-                        <div class="form-group">
-                                <label for="date de naissance">Date de naissance :</label>
-                                <input type="text" name="date de naissance" id="date de naissance" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="Lieu">Lieu :</label>
-                                <input type="text" name="Lieu" id="Lieu" required/>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="adresse">Adresse :</label>
-                            <input type="text" name="adresse" id="adresse" required/>
-                             <label for="tel">Tel :</label>
-                            <input type="text" name="tel" id="tel" required/>
-                             <label for="Contact">Contact en cas d'urgence :</label>
-                            <input type="text" name="Contact" id="Contact" required/>
-                        </div>
-                        <div class="form-radio">
-                            <label for="Genre" class="radio-label">Sex :</label>
-                            <div class="form-radio-item">
-                                <input type="radio" name="Genre" id="Homme" checked>
-                                <label for="Homme">Homme</label>
-                                <span class="check"></span>
-                            </div>
-                            <div class="form-radio-item">
-                                <input type="radio" name="Genre" id="femme">
-                                <label for="femme">Femme</label>
-                                <span class="check"></span>
-                            </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="nationalitÈ">NationalitÈ :</label>
-                                <input type="text" name="nationalitÈ" id="nationalitÈ" required/>
-                            <label for="etat civil">Etat civil :</label>
-                            <input type="text" name="etat civil" id="etat civil" required/>
-                              <label for="fonction">Fonction :</label>
-                              <input type="text" name="fonction" id="fonction" required/>
-                              <label for="nbrEnfant">Nombre d'enfants :</label>
-                              <input type="text" name="nbrEnfant" id="nbrEnfant" required/>
-                            </div>
-                        
-                  
-                        <div class="form-group">
-                            <label for="Affectation">Affectation :</label>
-                            <input type="text" name="Affectation" id="Affectation">
-                        </div>
-                        <div class="form-group">
-                            <label for="codeAff">Code affectation :</label>
-                            <input type="text" name="codeAff" id="codeAff">
+                            
+                        <div "form-group">
+                        <label>Formation pour :</label>
+                        <select name="formation" class="form-group">
+                          <option value="Licence fondamentale">Licence fondamentale</option>
+                          <option value="Licence professionnelle">Licence professionnelle</option>
+                          <option value="Master fondamental">Master fondamental</option>
+                          <option value="Master professionnel">Master professionnel</option>
+                          <option value="Master  de recherche">Master  de recherche</option>
+                          <option value="Cycle ing√©nieur">Cycle ing√©nieur</option>
+                          <option value="ann√©es pr√©paratoires">Ann√©es pr√©paratoires</option>
+                          <option value="Doctorat">Doctorat</option>
+                          <option value="autre">autre</option>
+                        </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">Email :</label>
-                            <input type="email" name="email" id="email" />
-                            <label for="Photo">Photo :</label>
-                            <input type="file"  accept="image/gif,image/jpg, image/jpeg, image/png" required name='img'/>
+                          <div>
+                          <label>Responsable :</label>
+                        <select name="idProf" class="form-group">
+                        <%for(Prof prof : profs){ %>
+                          <option value="<%= prof.getIdProf() %>"><%= prof.getSom()+" "+prof.getNomProf()+" "+prof.getPrenomProf() %></option>
+                        <%} %>
+                        </select>
                         </div>
+                       
+                    
+                            <div class="form-group">
+                                <label for="date de cr√©ation">date de cr√©ation:</label>
+                                <input type="date" name="creatDate">
+                            </div>
                         <div class="form-submit">
                             <input type="submit" value="Annuler" class="submit" name="reset" id="reset" />
                             <input type="submit" value="Ajouter" class="submit" name="submit" id="submit" />
@@ -118,9 +79,7 @@
       $('#register-form').reset();
   });
 
-})(jQuery);</script>
-
-<%-- --%>
+})(jQuery);</script><%-- --%>
 
 <%@include file="footer_side_menu.jsp" %>
 

@@ -5,44 +5,66 @@
  ***********************************************************************/
 package com.grh.beans;
 import java.util.*;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+
 @Entity
 @Table(name="filiere")
-
 public class Filiere {
+	
    @Id
-   @GeneratedValue
-	private int idFiliere;
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    @Column(name="ID_FILIERE")
+   private int idFiliere;
    
-    private int IdProf;
-   
-	private String formation;
    @Column(name="FORMATION")
-   
-	private String nomFiliere;
+   private String formation;
+
    @Column(name="NOM_FILIERE")
+   private String nomFiliere;
    
-	private List<Utilisateur> utilisateur;
-	private List<Module> module;
-	private List<Section> section;
+   @Column(name="DATE")
+   private Date date;
+
+   @OneToOne(fetch = FetchType.LAZY)
+   @JoinColumn(name = "ID_PROF")
+   private Prof profResponsable;
+  	
+	//private List<Utilisateur> utilisateur;
+	//private List<Module> module;
+	//private List<Section> section;
+	
+	
+	
+	public Filiere() {
+		super();
+	}
+	
+	
+	public Filiere(String formation, String nomFiliere, Date date, Prof profResponsable) {
+		super();
+		this.formation = formation;
+		this.nomFiliere = nomFiliere;
+		this.date = date;
+		this.profResponsable = profResponsable;
+	}
+
+
 	public int getIdFiliere() {
 		return idFiliere;
 	}
 	public void setIdFiliere(int idFiliere) {
 		this.idFiliere = idFiliere;
 	}
-	public int getIdProf() {
-		return IdProf;
-	}
-	public void setIdProf(int idProf) {
-		IdProf = idProf;
-	}
+	
 	public String getFormation() {
 		return formation;
 	}
@@ -55,24 +77,27 @@ public class Filiere {
 	public void setNomFiliere(String nomFiliere) {
 		this.nomFiliere = nomFiliere;
 	}
-	public List<Utilisateur> getUtilisateur() {
-		return utilisateur;
+
+
+	public Prof getProfResponsable() {
+		return profResponsable;
 	}
-	public void setUtilisateur(List<Utilisateur> utilisateur) {
-		this.utilisateur = utilisateur;
+
+
+	public void setProfResponsable(Prof profResponsable) {
+		this.profResponsable = profResponsable;
 	}
-	public List<Module> getModule() {
-		return module;
+
+
+	public Date getDate() {
+		return date;
 	}
-	public void setModule(List<Module> module) {
-		this.module = module;
+
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
-	public List<Section> getSection() {
-		return section;
-	}
-	public void setSection(List<Section> section) {
-		this.section = section;
-	}
+
    
    
 }

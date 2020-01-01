@@ -60,11 +60,10 @@
       <mapping class="com.grh.beans.DroitUt" />
       <mapping class="com.grh.beans.ElementModule" />
       <mapping class="com.grh.beans.Enseigner" />
-      <mapping class="com.grh.beans.Filiere" />
-      
       <mapping class="com.beans.grh.Mission" />
       <mapping class="com.beans.grh.Module" />
       -->
+      <mapping class="com.grh.beans.Filiere" />
       <mapping class="com.grh.beans.Grade" />
       <mapping class="com.grh.beans.Prof" />
       <!-- 
