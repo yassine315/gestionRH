@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@page import="com.grh.beans.Prof,java.util.List,java.nio.charset.StandardCharsets
-    "  %>
-=======
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
     <%@page import="com.grh.beans.Prof,java.util.List,java.text.SimpleDateFormat"  %>
->>>>>>> 4e684ef9387dcfce9bf2fa0543ffa7c24b2fcaf4
-    
-    
+
     <% List<Prof> profs = (List)request.getAttribute("profs"); %>
 <!DOCTYPE html>
 <html>

@@ -42,16 +42,16 @@
                                 <input type="text" name="nom" id="Nom" required/>
                             </div>
                              <div class="form-group">
-                                <label for="PrÈnom">Nom Ar :</label>
-                                <input type="text" name="nomAr" id="PrÈnom" required/>
+                                <label for="Prenom">Nom Ar :</label>
+                                <input type="text" name="nomAr" id="Prenom" required/>
                             </div>
                             <div class="form-group">
-                                <label for="Pr√©nom">Pr√©nom :</label>
-                                <input type="text" name="prenom" id="Pr√©nom" required/>
+                                <label for="Prenom">Pr√©nom :</label>
+                                <input type="text" name="prenom" id="Prenom" required/>
                             </div>
                              <div class="form-group">
-                                <label for="PrÈnom">PrÈnom Ar :</label>
-                                <input type="text" name="prenomAr" id="PrÈnom" required/>
+                                <label for="Prenom">Pr√©nom Ar :</label>
+                                <input type="text" name="prenomAr" id="Prenom" required/>
                             </div>
                         </div>
                          <div class="form-row">
