@@ -15,6 +15,15 @@ import javax.persistence.Table;
 @Table(name="utilisateur")
 public class Utilisateur {
   
+	public Utilisateur(String cinUt, String nomUt, String prenomUt, String emailUt, String mpUt, String telUt) {
+		super();
+		this.cinUt = cinUt;
+		this.nomUt = nomUt;
+		this.prenomUt = prenomUt;
+		this.emailUt = emailUt;
+		this.mpUt = mpUt;
+		this.telUt = telUt;
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID_UT")

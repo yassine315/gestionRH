@@ -32,9 +32,20 @@ public class AjouterUser extends HttpServlet {
     public AjouterUser() {
         super();
         // TODO Auto-generated constructor stub
-        sessionFactory = HibernateUtil.getSessionFactory();
+        
         
     }
+    
+    
+
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+		sessionFactory= HibernateUtil.getSessionFactory();
+	}
+
+
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -74,11 +85,18 @@ public class AjouterUser extends HttpServlet {
 		String emailUt = request.getParameter("emailUt");
 		String mpUt = request.getParameter("mpUt");
 		
+		Session session=sessionFactory.openSession();
+		session.beginTransaction();
+		com.grh.beans.Utilisateur user= new com.grh.beans.Utilisateur(cinUt, nomUt, prenomUt, emailUt, mpUt, telUt);
+		session.save(user);
+		session.getTransaction().commit();
+		session.close();
 	}
 
 	public AjouterUser(SessionFactory sessionFactory, List<DroitUt> droits) {
 		super();
 		this.sessionFactory = sessionFactory;
+	
 		this.droits = droits;
 	}
 
